@@ -1,0 +1,50 @@
+{
+  "name": "touch-beetle-demo-frontend",
+  "version": "0.1.0",
+  "private": true,
+  "homepage": "/",
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-scripts": "5.0.1",
+    "@google/model-viewer": "~3.2.0",
+    "three": "~0.154.0",
+    "prop-types": "~15.8.1",
+    "react-svg": "~16.1.19",
+    "@mui/material": "~5.14.1",
+    "@emotion/react": "~11.11.1",
+    "@emotion/styled": "~11.11.0",
+    "@mui/icons-material": "~5.14.1",
+    "wavesurfer.js": "~7.0.6",
+    "lodash": "~4.17.21",
+    "react-markdown": "~8.0.7",
+    "rehype-sanitize": "~6.0.0",
+    "rehype-raw": "~7.0.0",
+    "react-material-ui-carousel": "~3.4.2"
+  },
+  "devDependencies": {
+    "@babel/plugin-proposal-private-property-in-object": "~7.21.11"
+  },
+  "scripts": {
+    "start": "GENERATE_SOURCEMAP=false PORT=3002 BROWSER=NONE react-scripts start",
+    "build": "react-scripts build",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ]
+  }
+}
