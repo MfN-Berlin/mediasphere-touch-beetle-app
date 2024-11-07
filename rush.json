@@ -430,8 +430,8 @@
     //   "tags": [ "tools" ]
     // }
     {
-      "packageName": "touch-beetle-demo-frontend",
-      "projectFolder": "packages/touch-beetle-demo-frontend"
+      "packageName": "mediasphere-touch-beetle-app",
+      "projectFolder": "app"
     }
   ]
 }
