@@ -1,3 +1,5 @@
+[![Static Badge](https://img.shields.io/badge/lang-en-yellow)](./README.md)
+
 # Responsiver Tastkäfer
 
 Ausgangsbasis für das taktile Modell ist der 3D-Scan eines Waldmistkäfers aus Sammlung des Museums. Die 3D-Daten mussten von unseren Projektleiter*innen für die Reproduktion als Modell aufbereitet werden. Dank hochaufgelöster Fotografien des Käfers konnten auch filigranste Körperstellen mit dem digitalen Zwilling abgeglichen werden, um den Waldmistkäfer möglichst lebensecht nachzubauen.
