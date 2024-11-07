@@ -6,7 +6,7 @@
 
 The starting point for the tactile model is a 3D scan of a dor beetle from the museum's collection. The 3D data had to be prepared by our project managers for reproduction as a model. Thanks to high-resolution photographs of the beetle, even the most delicate body parts could be matched with the digital twin to recreate the dor beetle as lifelike as possible.
 
-[Learn more on WERK5's website.](hhttps://werk5.com/en/projects/dor-beetle-responsive-tactile-model/)
+[Learn more on WERK5's website.](https://werk5.com/en/projects/dor-beetle-responsive-tactile-model/)
 
 ## App
 
