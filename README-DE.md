@@ -1,4 +1,5 @@
 [![Static Badge](https://img.shields.io/badge/lang-en-blue)](./README.md)
+[![Static Badge](https://img.shields.io/badge/lang-de-blue)](./README-DE.md)
 
 # Responsiver Tastkäfer
 
