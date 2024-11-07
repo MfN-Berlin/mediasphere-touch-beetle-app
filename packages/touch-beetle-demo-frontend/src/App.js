@@ -24,9 +24,8 @@ import DataFrame from './components/DataFrame';
 
 function App() {
 
-  const disableExternalLinks = new URLSearchParams(window.location.search).has('disableExternalLinks')
-  //console.log({disableExternalLinks})
-
+  const disableExternalLinks = !(new URLSearchParams(window.location.search).has('enableExternalLinks'))
+  
   /** Load data.json */
   const [data, setData] = useState();
   const [ready, setReady] = useState(false)
@@ -221,9 +220,9 @@ function App() {
               </MenuItem>
             })
             }
-            {data && ready && <>
-            <Divider />
-            <MenuItem component={Link} href={data?.strings.searchUrl} >
+            {data && ready && !disableExternalLinks && [
+            <Divider key="divider" />,
+            <MenuItem key="item" component={Link} href={data?.strings.searchUrl} >
 
               <ListItemIcon sx={{ color: 'text.secondary', alignSelf:'flex-start' }} fontSize="small" > <SearchIcon /></ListItemIcon>
               <ListItemText 
@@ -233,7 +232,7 @@ function App() {
                             secondary={data.strings.searchSecondaryText} />
 
             </MenuItem>
-            </>}
+            ]}
           </Menu>
 
 
