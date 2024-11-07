@@ -1,14 +1,14 @@
-# Responsiver Tastkäfer
+# Responsive Touch Beetle
 
-Ausgangsbasis für das taktile Modell ist der 3D-Scan eines Waldmistkäfers aus Sammlung des Museums. Die 3D-Daten mussten von unseren Projektleiter*innen für die Reproduktion als Modell aufbereitet werden. Dank hochaufgelöster Fotografien des Käfers konnten auch filigranste Körperstellen mit dem digitalen Zwilling abgeglichen werden, um den Waldmistkäfer möglichst lebensecht nachzubauen.
+The starting point for the tactile model is a 3D scan of a dor beetle from the museum's collection. The 3D data had to be prepared by our project managers for reproduction as a model. Thanks to high-resolution photographs of the beetle, even the most delicate body parts could be matched with the digital twin to recreate the dor beetle as lifelike as possible.
 
-[Mehr erfahren auf der Website von WERK5.](https://werk5.com/projekte/responsiver_tastkaefer/)
+[Learn more on WERK5's website.](hhttps://werk5.com/en/projects/dor-beetle-responsive-tactile-model/)
 
 ## App
 
-Diese App ist eine digitale Reproduktion des taktilen Tastkäfermodells.
+This app is a digital reproduction of the tactile Touch Beetle model.
 
-### Entwicklung
+### Development
 
 ```sh
 
