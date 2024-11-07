@@ -24,7 +24,8 @@
         "original":"Original",
         "model":"Tastmodell",
         "amulet":"Käferamulet aus dem Alten Ägypten",
-        "linkDisabled":"(Link deaktiviert)"
+        "linkDisabled":"(Link deaktiviert)",
+        "page":"Seite"
     },
     "info": {
         "aboutIntro":{
