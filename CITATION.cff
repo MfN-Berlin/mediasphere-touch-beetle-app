@@ -1,0 +1,13 @@
+cff-version: 1.2.0
+title: Responsive Touch Beetle
+message: >-
+  If you use this software, please cite it using the
+  metadata from this file.
+type: software
+authors:
+  - given-names: Jasper
+    family-names: Funk-Smit
+  - given-names: Jens
+    family-names: Dobberthin
+repository-code: 'https://github.com/MfN-Berlin/mediasphere-touch-beetle-app'
+abstract: 'An interactive app to explore a dor beetle. '
