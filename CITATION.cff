@@ -1,3 +1,6 @@
+# This CITATION.cff file was generated with cffinit.
+# Visit https://bit.ly/cffinit to generate yours today!
+
 cff-version: 1.2.0
 title: Responsive Touch Beetle
 message: >-
@@ -10,4 +13,5 @@ authors:
   - given-names: Jens
     family-names: Dobberthin
 repository-code: 'https://github.com/MfN-Berlin/mediasphere-touch-beetle-app'
-abstract: 'An interactive app to explore a dor beetle. '
+url: 'https://mfn-berlin.github.io/mediasphere-touch-beetle-app/'
+abstract: An interactive app to explore a dor beetle.
