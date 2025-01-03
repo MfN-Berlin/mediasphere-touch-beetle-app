@@ -4,7 +4,7 @@ import { uniq } from "lodash";
 import DataFrame from "./DataFrame";
 
 const ModelViewer = (props) => {
-  const { data, showDimensions, dimensionsSelector, showHotspots, setReady: propagateReady, interactive, mobile, disableExternalLinks } = props;
+  const { getString, data, showDimensions, dimensionsSelector, showHotspots, setReady: propagateReady, interactive, mobile, disableExternalLinks } = props;
 
   const theme = useTheme();
 
@@ -569,7 +569,7 @@ const ModelViewer = (props) => {
               /** Hotspots */
               Object.keys(data.model.hotspots).map((key) => {
                 return (
-                  <Tooltip key={key} title={data.model.hotspots[key].title}>
+                  <Tooltip key={key} title={ getString("title", `model.hotspots.${key}`) }>
                     <Box
                       className="hotspot"
                       slot={`hotspot-${key}`}
@@ -616,7 +616,8 @@ const ModelViewer = (props) => {
             setCameraOrbit={setCameraOrbit}
             setCameraTarget={setCameraTarget}
             setFieldOfView={setFieldOfView}
-            strings={data.strings}
+            getString={getString}
+            getStringPath={`model.hotspots.${selected}`}
             disableExternalLinks={disableExternalLinks}
           /></>
       )}

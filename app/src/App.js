@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { useCallback, useContext, useEffect, useState } from "react";
 import ModelViewer from "./components/ModelViewer";
 import { ReactSVG } from "react-svg";
 import {
@@ -32,13 +32,19 @@ import HelpIcon from "@mui/icons-material/Help";
 import SchoolIcon from "@mui/icons-material/School";
 import SearchIcon from "@mui/icons-material/Search";
 import CloseIcon from "@mui/icons-material/Close";
+import LanguageIcon from "@mui/icons-material/Language";
 
 import DataFrame from "./components/DataFrame";
+import { get } from "lodash";
 
 function App() {
   const disableExternalLinks = !new URLSearchParams(window.location.search).has(
     "enableExternalLinks"
   );
+
+
+
+
 
   /** Load data.json */
   const [data, setData] = useState();
@@ -63,6 +69,29 @@ function App() {
         setData();
       });
   }, []);
+
+  // Use browserlang as default
+  const [language, setLanguage] = useState( (navigator.language || navigator.userLanguage).split('-')[0] )
+  const getString = useCallback(
+    (key, path = "strings") => {
+      if (!data) return "";
+      const address = `${path}.${key}.${language}`;
+      const value = get(data, address);
+      if ( typeof value !== 'string' ) console.warn("Missing or invalid translation: " + address);
+      return value;
+    },
+    [data, language]
+  );
+
+  useEffect( () => {
+    if( data ){
+      if( !Object.keys(data.languages).includes(language) ) setLanguage('de')
+    }
+  }, [data, language] )
+
+  useEffect(() => {
+    document.title = getString("documentTitle");
+  }, [getString]);
 
   const [showDimensions, setShowDimensions] = useState(false);
   const [showHotspots, setShowHotspots] = useState(false);
@@ -91,13 +120,6 @@ function App() {
   }, [modelInteractive, showHotspots, showDimensions]);
 
   const { toggleTheme, theme: themeId } = useContext(DataContext);
-
-  // //const commonTop
-  // useEffect( () => {
-  //   if( ready ) setInfoFrameId('aboutProject')
-  // }, [ready])
-
-  //console.log(themeId)
 
   const [menuAnchor, setMenuAnchor] = useState();
 
@@ -143,7 +165,7 @@ function App() {
             mt: "5px",
           }}
         >
-          Waldmistkäfer, M. 20:1
+          {getString("title")}
         </Typography>
 
         <Box sx={{ ml: "auto" }}>
@@ -172,54 +194,55 @@ function App() {
                   key="dimensions-tooltip-showing"
                   open={!Boolean(menuAnchor)}
                   title={
-                    <Box sx={{display:'flex' }}>
-                      <Box sx={{textAlign:'left'}}>
-                      <Typography sx={{  }} variant="body1">
-                        {data?.strings.dimensions}
-                      </Typography>
-                      <Typography
-                        variant="body2"
-                        component="span"
-                        sx={{ cursor: "pointer" }}
-                        onClick={() => setShowModelDimensions(false)}
-                      >
-                        {data?.strings.original}
-                      </Typography>
-                      <Switch
-                        checked={showModelDimensions}
-                        onChange={(e) =>
-                          setShowModelDimensions(e.currentTarget.checked)
-                        }
-                        sx={{
-                          "& .MuiSwitch-track": {
-                            bgcolor: "primary.main",
-                          },
-                          "& .MuiSwitch-switchBase": {
-                            color: "primary.main",
-                          },
-                        }}
-                      />
-                      <Typography
-                        variant="body2"
-                        component="span"
-                        sx={{ cursor: "pointer" }}
-                        onClick={() => setShowModelDimensions(true)}
-                      >
-                        {data?.strings.model}
-                      </Typography>
-                        </Box>
-                        <Box>
-                         
-                        <IconButton 
-                        title={data?.strings.close}
-                        onClick={ () => {
-                          setShowHotspots(true);
-                    setShowDimensions(false);
-                        }}
-                        size="small" sx={{ color:'text.primary', m:-0.5, ml:1}}><CloseIcon /></IconButton>
-                       
-                        </Box>
-
+                    <Box sx={{ display: "flex" }}>
+                      <Box sx={{ textAlign: "left" }}>
+                        <Typography sx={{}} variant="body1">
+                          {getString("dimensions")}
+                        </Typography>
+                        <Typography
+                          variant="body2"
+                          component="span"
+                          sx={{ cursor: "pointer" }}
+                          onClick={() => setShowModelDimensions(false)}
+                        >
+                          {getString("original")}
+                        </Typography>
+                        <Switch
+                          checked={showModelDimensions}
+                          onChange={(e) =>
+                            setShowModelDimensions(e.currentTarget.checked)
+                          }
+                          sx={{
+                            "& .MuiSwitch-track": {
+                              bgcolor: "primary.main",
+                            },
+                            "& .MuiSwitch-switchBase": {
+                              color: "primary.main",
+                            },
+                          }}
+                        />
+                        <Typography
+                          variant="body2"
+                          component="span"
+                          sx={{ cursor: "pointer" }}
+                          onClick={() => setShowModelDimensions(true)}
+                        >
+                          {getString("model")}
+                        </Typography>
+                      </Box>
+                      <Box>
+                        <IconButton
+                          title={getString("close")}
+                          onClick={() => {
+                            setShowHotspots(true);
+                            setShowDimensions(false);
+                          }}
+                          size="small"
+                          sx={{ color: "text.primary", m: -0.5, ml: 1 }}
+                        >
+                          <CloseIcon />
+                        </IconButton>
+                      </Box>
                     </Box>
                   }
                 >
@@ -230,7 +253,7 @@ function App() {
               return (
                 <Tooltip
                   key="dimensions-tooltip-default"
-                  title={data?.strings.showDimensions}
+                  title={getString("showDimensions")}
                 >
                   {btn}
                 </Tooltip>
@@ -239,7 +262,7 @@ function App() {
           })()}
 
           {/** Hotspots toggle */}
-          <Tooltip title={data?.strings.showHotspots}>
+          <Tooltip title={getString("showHotspots")}>
             <Box display={"inline-block"}>
               <IconButton
                 disabled={!modelInteractive}
@@ -257,9 +280,7 @@ function App() {
 
           {/** Theme toggle */}
           <Tooltip
-            title={
-              data?.strings[`theme${themeId === "dark" ? "Light" : "Dark"}`]
-            }
+            title={getString(`theme${themeId === "dark" ? "Light" : "Dark"}`)}
           >
             <IconButton
               size="small"
@@ -279,7 +300,7 @@ function App() {
             orientation="vertical"
           />
 
-          <Tooltip title={data?.strings.mainMenu}>
+          <Tooltip title={getString("mainMenu")}>
             <IconButton
               size="small"
               sx={{
@@ -302,6 +323,27 @@ function App() {
             open={Boolean(menuAnchor)}
             onClose={() => setMenuAnchor()}
           >
+            {data &&
+              ready && Object.keys(data.languages).length > 1 &&
+              Object.keys(data.languages)
+                .map((lang) => {
+                  return (
+                    <MenuItem key={`menuitem-language-${lang}`} onClick={() => setLanguage(lang)}>
+                      <ListItemIcon
+                        sx={{
+                          color: "text.secondary",
+                          opacity: lang === language ? 1 : 0.1,
+                        }}
+                        fontSize="small"
+                      >
+                        <LanguageIcon />
+                      </ListItemIcon>
+                      <ListItemText>{data.languages[lang]}</ListItemText>
+                    </MenuItem>
+                  );
+                })
+                .concat([<Divider key="divider" />])}
+
             {data &&
               ready &&
               Object.keys(data.info)
@@ -329,7 +371,7 @@ function App() {
                       </ListItemIcon>
                       <ListItemText
                         color="text.primary"
-                        primary={data.info[id].title}
+                        primary={getString("title", `info.${id}`)}
                       />
                     </MenuItem>
                   );
@@ -341,7 +383,7 @@ function App() {
                 <MenuItem
                   key="item"
                   component={Link}
-                  href={data?.strings.searchUrl}
+                  href={getString("searchUrl")}
                 >
                   <ListItemIcon
                     sx={{ color: "text.secondary", alignSelf: "flex-start" }}
@@ -357,8 +399,8 @@ function App() {
                       },
                     }}
                     color="text.primary"
-                    primary={data.strings.searchPrimaryText}
-                    secondary={data.strings.searchSecondaryText}
+                    primary={getString("searchPrimaryText")}
+                    secondary={getString("searchSecondaryText")}
                   />
                 </MenuItem>,
               ]}
@@ -367,8 +409,10 @@ function App() {
       </Box>
 
       {/** Model */}
+      { data &&  
       <ModelViewer
         data={data}
+        getString={getString}
         showDimensions={showDimensions}
         dimensionsSelector={showModelDimensions ? "model" : "original"}
         showHotspots={showHotspots}
@@ -377,6 +421,7 @@ function App() {
         mobile={mobile}
         disableExternalLinks={disableExternalLinks}
       />
+}
 
       {/** Footer */}
       <Box
@@ -471,8 +516,8 @@ function App() {
           {/* <Button variant='contained' onClick={() => {
             setHasStarted(true);
             setInfoFrameId('aboutCreature')
-          }}  >{data?.strings.start}</Button> */}
-          <Tooltip placement="top" title={data?.strings.start}>
+          }}  >{getString("start}</Button> */}
+          <Tooltip placement="top" title={getString("start")}>
             <Fab
               color="primary"
               size="large"
@@ -495,11 +540,12 @@ function App() {
       )}
 
       {/** Model-independent info frame */}
-      {data && infoFrameId && (
+      {data && infoFrameId && ready &&  (
         <DataFrame
           disableExternalLinks={disableExternalLinks}
           mobile={mobile}
-          strings={data.strings}
+          getString={getString}
+          getStringPath={`info.${infoFrameId}`}
           data={data.info[infoFrameId]}
           onClose={() =>
             setInfoFrameId(

@@ -36,10 +36,12 @@ import PauseIcon from "@mui/icons-material/Pause";
 import NavigateNextIcon from "@mui/icons-material/NavigateNext";
 import NavigateBeforeIcon from "@mui/icons-material/NavigateBefore";
 
+
 const DataFrame = forwardRef((props, ref) => {
   const {
     mobile,
-    strings,
+    getString,
+    getStringPath,
     data,
     onClose,
     setCameraOrbit,
@@ -167,9 +169,9 @@ const DataFrame = forwardRef((props, ref) => {
         }}
       >
         <Typography variant="h2" sx={{ display: "inline-block" }}>
-          {data.title}
+          {getString("title", getStringPath)}
         </Typography>
-        <Tooltip title={strings.close}>
+        <Tooltip title={getString("close")}>
           <IconButton
             sx={{
               color: "text.primary",
@@ -222,13 +224,13 @@ const DataFrame = forwardRef((props, ref) => {
           <ReactMarkdown
             rehypePlugins={[rehypeRaw]}
             components={{
-              a: ({ node, ...props }) => (
-                <span>
+              a: ({ node, ...props }) => {
+                return <span>
                   <Tooltip
                     placement="top"
                     title={
                       (props.title || "") +
-                      (disableExternalLinks ? "\n" + strings?.linkDisabled : "")
+                      (disableExternalLinks ? "\n" + getString("linkDisabled") : "")
                     }
                   >
                     <Link
@@ -238,18 +240,19 @@ const DataFrame = forwardRef((props, ref) => {
                     />
                   </Tooltip>
                 </span>
-              ),
+              }
+              ,
               p: "div",
-              figcaption: ({ node, ...props }) => (
-                <Typography
+              figcaption: ({ node, ...props }) => {
+                return <Typography
                   variant="caption"
                   sx={{ display: "block", mt: -1, mb: 1 }}
                   {...props}
                 />
-              ),
+              },
               startbutton: ({ node, ...props }) => (
                 <Box sx={{ my: 4, display: "flex" }}>
-                  <Tooltip title={strings?.startHotspots}>
+                  <Tooltip title={getString("startHotspots")}>
                     <IconButton
                       size="large"
                       onClick={() => onClose()}
@@ -267,9 +270,7 @@ const DataFrame = forwardRef((props, ref) => {
                 </Box>
               ),
             }}
-          >
-            {node.text}
-          </ReactMarkdown>
+          >{ getString("text", getStringPath + '.nodes.' + index )}</ReactMarkdown>
         </Typography>
         {/* {index < data.nodes.length - 1 && <Button variant="contained" onClick={next}>Next</Button>} */}
       </AutoScrollContainer>
@@ -355,7 +356,7 @@ const DataFrame = forwardRef((props, ref) => {
                 },
                 left: 200,
               }}
-              title={waversureferReady ? strings.setAudioPlayhead : ""}
+              title={waversureferReady ? getString("setAudioPlayhead") : ""}
             >
               <Box sx={{ flexGrow: 1 }} onMouseMove={updateWSX}>
                 <WaveSurferComponent
@@ -370,7 +371,7 @@ const DataFrame = forwardRef((props, ref) => {
               </Box>
             </Tooltip>
             {waversureferReady ? (
-              <Tooltip title={strings[isPlaying ? "pause" : "play"]}>
+              <Tooltip title={getString(isPlaying ? "pause" : "play")}>
                 <IconButton
                   size="large"
                   onClick={() => {
@@ -423,7 +424,7 @@ const DataFrame = forwardRef((props, ref) => {
               },
             }}
           >
-            <Tooltip title={strings.prevPage}>
+            <Tooltip title={getString("prevPage")}>
               <Fab
                 size="small"
                 sx={{
@@ -438,7 +439,7 @@ const DataFrame = forwardRef((props, ref) => {
 
             {node.audio ? (
               <>
-                <Tooltip title={strings.autoscrollTooltip}>
+                <Tooltip title={getString("autoscrollTooltip")}>
                   <FormControlLabel
                     sx={{ ml: "auto" }}
                     labelPlacement="end"
@@ -459,11 +460,11 @@ const DataFrame = forwardRef((props, ref) => {
                         }}
                       />
                     }
-                    label={strings.autoscroll}
+                    label={getString("autoscroll")}
                   />
                 </Tooltip>
 
-                <Tooltip title={strings.autoplayTooltip}>
+                <Tooltip title={getString("autoplayTooltip")}>
                   <FormControlLabel
                     sx={{ mr: "auto" }}
                     labelPlacement="end"
@@ -484,7 +485,7 @@ const DataFrame = forwardRef((props, ref) => {
                         }}
                       />
                     }
-                    label={strings.autoplay}
+                    label={getString("autoplay")}
                   />
                 </Tooltip>
               </>
@@ -492,7 +493,7 @@ const DataFrame = forwardRef((props, ref) => {
               <Box sx={{ mx: "auto" }} />
             )}
 
-            <Tooltip title={strings.nextPage}>
+            <Tooltip title={getString("nextPage")}>
               <Fab
                 size="small"
                 sx={{
@@ -510,7 +511,7 @@ const DataFrame = forwardRef((props, ref) => {
           {data.nodes.length > 1 && (
             <Box sx={{ pb: 1, textAlign: "center" }}>
               <Typography color="text.secondary" variant="caption">
-                {strings.page} {index + 1}/{data.nodes.length}
+                {getString("page")} {index + 1}/{data.nodes.length}
               </Typography>
             </Box>
           )}

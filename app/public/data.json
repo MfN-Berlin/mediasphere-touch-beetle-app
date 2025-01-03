@@ -1,185 +1,251 @@
 {
-    "strings":{
-        "mainMenu":"Hauptmenü",
-        "themeDark":"Dunkles Farbschema verwenden",
-        "themeLight":"Helles Farbschema verwenden",
-        "start":"Anfangen",
-        "startHotspots":"Interaktive Präsentation des Modells starten",
-        "showHotspots":"Hotspots des Modells anzeigen",
-        "showDimensions":"Abmessungen des Modells anzeigen",
-        "dimensions":"Abmessungen des Modells",
-        "nextPage":"Nächste Seite",
-        "prevPage":"Vorherige Seite",
-        "autoplay":"Autoplay",
-        "autoplayTooltip":"Audio automatisch abspielen.",
-        "autoscroll":"Autoscroll",
-        "autoscrollTooltip":"Text scrollt automatisch mit der Audiospur mit.",
-        "play":"Play",
-        "pause":"Pause",
-        "close":"Schließen",
-        "setAudioPlayhead":"Springe zu dieser Position in der Audiospur.",
-        "searchPrimaryText":"Suchen",
-        "searchSecondaryText":"Finde mehr Dateien des Waldmistkäfers im DatenPortal vom Museum für Naturkunde, Berlin",
-        "searchUrl":"https://portal.museumfuernaturkunde.berlin/search?query=%7B%22q%22%3A%22%22%2C%22filters%22%3A%7B%22key_value%22%3A%5B%7B%22key%22%3A%22taxa%22%2C%22value%22%3A%5B%22Anoplotrupes%20stercorosus%22%5D%7D%5D%7D%7D",
-        "original":"Original",
-        "model":"Tastmodell",
-        "amulet":"Käferamulet aus dem Alten Ägypten",
-        "linkDisabled":"(Link deaktiviert)",
-        "page":"Seite"
+  "languages": {
+    "de": "Deutsch"
+  },
+  "strings": {
+    "mainMenu": { "de": "Hauptmenü", "en": null },
+    "themeDark": { "de": "Dunkles Farbschema verwenden", "en": null },
+    "themeLight": { "de": "Helles Farbschema verwenden", "en": null },
+    "start": { "de": "Anfangen", "en": null },
+    "startHotspots": {
+      "de": "Interaktive Präsentation des Modells starten",
+      "en": null
     },
-    "info": {
-        "aboutIntro":{
-            "index":10,
-            "title":"Einführung",
-            "nodes":[{
-                "text":"Die Grundlage für das hier gezeigte interaktive 3D-Modell eines Waldmistkäfers ist ein Projekt der [Mediasphere For Nature](https://mediasphere.museumfuernaturkunde.berlin) - das Lab für digitale Medien am Museum für Naturkunde Berlin. Der interaktive Online-Käfer basiert auf einem sensorischen Tastmodell, das vor Ort am Museum für Naturkunde bei speziell durch die Bildungsabteilung angebotenen Tasterlebnistouren für blinde und sehbehinderte Menschen zum Einsatz kommt.![Responsives Tastmodell!](./static/img/Insektenmodell.jpg \"Responsives Tastmodell\")<figcaption>Responsives Tastmodell; Foto: werk5 GmbH</figcaption><startbutton />"
-            }]
+    "showHotspots": { "de": "Hotspots des Modells anzeigen", "en": null },
+    "showDimensions": { "de": "Abmessungen des Modells anzeigen", "en": null },
+    "dimensions": { "de": "Abmessungen des Modells", "en": null },
+    "nextPage": { "de": "Nächste Seite", "en": null },
+    "prevPage": { "de": "Vorherige Seite", "en": null },
+    "autoplay": { "de": "Autoplay", "en": null },
+    "autoplayTooltip": { "de": "Audio automatisch abspielen.", "en": null },
+    "autoscroll": { "de": "Autoscroll", "en": null },
+    "autoscrollTooltip": {
+      "de": "Text scrollt automatisch mit der Audiospur mit.",
+      "en": null
+    },
+    "play": { "de": "Play", "en": null },
+    "pause": { "de": "Pause", "en": null },
+    "close": { "de": "Schließen", "en": null },
+    "setAudioPlayhead": {
+      "de": "Springe zu dieser Position in der Audiospur.",
+      "en": null
+    },
+    "searchPrimaryText": { "de": "Suchen", "en": null },
+    "searchSecondaryText": {
+      "de": "Finde mehr Dateien des Waldmistkäfers im DatenPortal vom Museum für Naturkunde, Berlin",
+      "en": null
+    },
+    "searchUrl": {
+      "de": "https://portal.museumfuernaturkunde.berlin/search?query=%7B%22q%22%3A%22%22%2C%22filters%22%3A%7B%22key_value%22%3A%5B%7B%22key%22%3A%22taxa%22%2C%22value%22%3A%5B%22Anoplotrupes%20stercorosus%22%5D%7D%5D%7D%7D",
+      "en": null
+    },
+    "original": { "de": "Original", "en": null },
+    "model": { "de": "Tastmodell", "en": null },
+    "amulet": { "de": "Käferamulet aus dem Alten Ägypten", "en": null },
+    "linkDisabled": { "de": "(Link deaktiviert)", "en": null },
+    "page": { "de": "Seite", "en": null },
+    "title": { "de": "Waldmistkäfer, M. 20:1", "en": "Dor beetle, S. 20:1" },
+    "documentTitle": { "de": "Der Waldmistkäfer", "en": null }
+  },
+  "info": {
+    "aboutIntro": {
+      "index": 10,
+      "title": { "de": "Einführung Tastmodell", "en": null },
+      "nodes": [
+        {
+          "text": {
+            "de": "Die Grundlage für das hier gezeigte interaktive 3D-Modell eines Waldmistkäfers ist ein Projekt der [Mediasphere For Nature](https://mediasphere.museumfuernaturkunde.berlin) - das Lab für digitale Medien am Museum für Naturkunde Berlin. Der interaktive Online-Käfer basiert auf einem responsiven Tastmodell. Es kommt vor Ort am Museum bei Sonderveranstaltungen oder bei speziell durch die Bildungsabteilung angebotenen Tasterlebnistouren für blinde und sehbehinderte Menschen zum Einsatz. Auf zahlreichen Museumsmessen oder Fachveranstaltungen konnte es vom Fachpublikum getestet werden. Im Mai 2023 erhielt das Tastmodell auf der LEARNTEC Fachmesse für digitale Bildung einen Innovationspreis in der Kategorie „Gesellschaft und lebenslanges Lernen“. ![Responsives Tastmodell!](./static/img/Insektenmodell.jpg \"Responsives Tastmodell\")<figcaption>Responsives Tastmodell; Foto: werk5 GmbH</figcaption>",
+            "en": "<startbutton />"
+          }
         },
-        
-        "aboutCreature": {
-            "title": "Der Waldmistkäfer",
-            "index":20,
-            "nodes": [
-                {   
-                    "text": "Hallo und willkommen zu einer Audiotour über einen kleinen Bewohner unserer heimischen Natur. Hier erfahren Sie nicht nur etwas über Merkmale und Verhaltensweisen des Waldmistkäfers. Sie erhalten auch Informationen aus Forschung und Geschichte, die z.B. erklären, was Mistkäfer mit der Milchstraße, einer Violine oder dem Alten Ägypten verbindet. \n\nDer Waldmistkäfer ist in ganz Europa bis hin zum Westen Sibiriens verbreitet. Er lebt sowohl im Flachland als auch in hohen Gebirgslagen von bis zu 2.000 Metern. Besonders häufig anzutreffen ist er, wie sein Name schon verrät, in bewaldeten Gebieten. \n\nDer Waldmistkäfer sowie andere Mistkäferarten sind in ihren Lebensräumen ein wichtiger Bestandteil des natürlichen Ökosystems. Durch die Entsorgung des Kots anderer Tiere beseitigen sie gleichzeitig auch die darin enthaltenen Krankheitserreger und Parasiten. Durch das Graben tiefer Tunnel tragen sie außerdem zur ständigen Düngung und Belüftung des Bodens bei und gewährleisten somit, dass bei Regen mehr Wasser einsickern kann und dadurch Pflanzen besser versorgt werden.\n\nDie Bedeutung des Mistkäfers wird vor allem dort sichtbar, wo es ihn nicht gibt, z.B. in Australien und Neuseeland. Dort wurden im 19. Jahrhundert große Rinderherden eingeführt. Heimische Insekten können den Rindermist nicht verwerten. Daher kann an jenen Stellen, wo der Mist hinfällt, lange kein Gras nachwachsen und es kommt zu einer raschen Vermehrung von Fliegen und Parasiten. Im Rahmen eines australischen Forschungsprojekts aus den 1960er Jahren wurden Mistkäferarten ausfindig gemacht, die am besten für den Einsatz in Australien geeignet sind. Die ausgewählten Arten leisten seither erfolgreich ihren Dienst und der Leiter des Projekts, George Bornemissza, erhielt für seine Forschung das durch Königin Elisabeth II. etablierte Ehrenzeichen Order of Australia.",
-                    "audio": "8_1_2_EDIT.mp3"
-                }, 
-                {
-                    "gallery":[{
-                        "src":"./static/img/waldmistkaefer_hires_01.jpg",
-                        "caption":"Waldmistkäfer; Foto: ©B. Schurian,  MfN"
-                    },
-                    {
-                        "src":"./static/img/waldmistkaefer_hires_02.jpg",
-                        "caption":"Waldmistkäfer; Foto: ©B. Schurian,  MfN"
-                    },
-                    {
-                        "src":"./static/img/waldmistkaefer_hires_03.jpg",
-                        "caption":"Waldmistkäfer; Foto: ©B. Schurian,  MfN"
-                    }]
-                   
-                }
-                
-            ]
-        },
-        "aboutAmulet":{
-            "index":30,
-            "title":"Käferamulett",
-            "nodes":[
-                {
-                    "text":"![Käferamulet!](./static/img/jewel.webp \"Käferamulet\")<figcaption>Im Alten Ägypten galt der heilige Pillendreher als Symbol für den Kreislauf der Sonne und für die Auferstehung. Die Sonne ist in diesem Amulett mit abgebildet. Sie kann als runde, leicht gewölbte Stelle in der Mitte oben, direkt über dem Käfer, betrachtet werden</figcaption>"
-                },
-            {
-                "text":"Käfermodelle erfreuen sich schon lange großer Beliebtheit. So wurden sie als Schmuckstück oder Plastik bereits vor über 4.000 Jahren im Alten Ägypten gefertigt. Kleine Käferamulette, genannt Skarabäen, waren begehrte Schmuckobjekte und haben in Ägypten bis heute eine Bedeutung als Glücksbringer.\n\nVorlage für diese Modelle ist der sogenannte heilige Pillendreher aus der Familie der Blatthornkäfer. Er dreht kleine Kugeln bzw. Pillen aus Dung, klemmt diese zwischen seine Hinterbeine und rollt sie rückwärts laufend vor sich her. Im Alten Ägypten galt der heilige Pillendreher als Symbol für den Kreislauf der Sonne und für die Auferstehung. Die Sonne ist in diesem Amulett mit abgebildet. Sie kann als runde, leicht gewölbte Stelle in der Mitte oben, direkt über dem Käfer, betrachtet werden.\n\nKäfermodelle wurden den Toten auch als Grabbeigabe mitgegeben, da man an ihre Schutzfunktion im Jenseits glaubte. So befanden sich beispielsweise im Grab des Pharaos Tutanchamun gleich mehrere aufwändig gestaltete Skarabäus-Schmuckstücke. Unter anderem auch die Vorlage zu genau dem Schmuckstück, das Sie gerade berühren. Das Besondere an diesem – hier vereinfacht dargestelltem – Amulett ist, dass es auch ägyptische Hieroglyphen-Schriftzeichen enthält.\n\nDiese Hieroglyphen sind im Amulett als ausgewölbte Symbole erkennbar: mittig am unteren Rand ist ein Halbkreis als kleine Auswölbung ertastbar. Dieser stellt eine Korb-Hieroglyphe dar. Darüber befindet sich die Käfer-Hieroglyphe. Oberhalb davon ist schließlich ein kreisrundes Zeichen, das für den Sonnengott „Ra“ steht. Diese Zeichen stellen zusammen den Thronnamen Tutanchamuns dar. Das ist jener Name, den er anlässlich seiner Krönung erhielt. Ausgesprochen heißt dieser Thronname „Neb-cheperu-Ra“. Das Käfersymbol ist also Teil des Herrschertitels von Tutanchamun.",
-                "audio": "7_1_2_EDIT.mp3"
-            }
-            ]
-        },
-        "aboutProject":{
-            "index":40,
-            "title":"Über dieses Projekt",
-            "nodes":[{
-                "text":"Das Museum für Naturkunde verfügt über eine Sammlung von rund 30 Millionen Objekten, wovon sich 15 Millionen in der Insektensammlung befinden. Inspiriert durch die am Haus stattfindende Insektendigitalisierung sowie die durch die angebotenen Tasterlebnistouren, ernennt die Mediasphere einen heimischen Waldmistkäfer zum „Star“ und entwickelte daraus ein im Maßstab 1:20 vergrößertes Tastmodell. ![Responsives Tastmodell!](./static/img/Insektenmodell.jpg \"Responsives Tastmodell\")<figcaption>Responsives Tastmodell; Foto: werk5 GmbH</figcaption>\nZiel des Projekts war jedoch kein reines Tastmodell, sondern ein sensorisch-taktiles Interaktionsmodell zur barrierefreien Wissensvermittlung. Das Modell vor Ort im Museum basiert auf einem Scan aus dem Mikro-CT-Labor des Museums und ist mit maßgeschneiderter Technologie in Form einer sensorischen Oberfläche ausgestattet. Wird diese berührt, so löst dies die Wiedergabe von Audiofeedback zum jeweils berührten Körperbereich aus. So können Menschen mit Sehbehinderung das Modell völlig selbstständig erleben. Braille- und Profilschrift, die sich auf dem Sockel der Taststation befinden, ergänzen die Audiotexte. Die Taststation verfügt u.a. auch über ein 3D-Abbild des Waldmistkäfers in Originalgröße, das den Größenvergleich mit dem hochskalierten Käfer ermöglicht.![Responsives Tastmodell!](./static/img/scan_microct.jpg \"Scan aus dem Mikro-CT-Labor des Museums für Naturkunde Berlin\")<figcaption>Scan aus dem Mikro-CT-Labor des Museums; Autorinnen: Kristin Mahlow, Eva-Maria Unglaube, Eva Patzschke</figcaption>"
-            }, {
-                "text":"Das Ergebnis ist ein anpassungsfähiges, intelligentes und taktiles Modell, das Nutzer*innen, Institutionen und Modellbauunternehmen gleichermaßen inspirieren soll. Durchgeführt wurde das Projekt von einem interdisziplinären Team aus den Bereichen Biologie, Labortechnik, Modellbau, Softwareentwicklung, Medienwissenschaften sowie Bildung und Inklusion. Hierbei wurde das Museum bei der Konzeption und Umsetzung des Exponats durch das Modellbauunternehmen werk5 GmbH unterstützt. Die Entwicklung des CMS und technischen Kerns des „Taktilen Lernens“ wurden durch den Kooperationspartner Interactive Scape GmbH übernommen. Expertise in Sachen Barrierefreiheit erhielt das Projektteam durch Ellen Schweizer von schweizergestaltung. Das gesamte Entwicklungsteam erhielt Feedback und Ideen von einer Fokusgruppe blinder und sehbehinderter Testpersonen, die das Projekt phasenweise begleiteten.\n\nDas Modell wurde auf der LEARNTEC 2023 mit einem Delina-Innovations-Award in der Kategorie „Gesellschaft und lebenslanges Lernen“ ausgezeichnet. Mehr Informationen zum Projekt befinden sich im [Blogbeitrag](https://mediasphere.museumfuernaturkunde.berlin/de/blog/2022/08/18/digitalisierung-zum-anfassen-teil-2/) der Mediasphere For Nature."
-            }]
+        {
+          "text": {
+            "de": "Das responsive Tastmodell wurde gemeinsam mit der Berliner Modellbaufirma werk5 GmbH entwickelt wurde. Unterstützung erhielt das Projekt von Interactive Scape GmbH in den Bereichen Technikentwicklung/Sensorik sowie von schweizergestaltung im Bereich Inklusionsexpertise. Ebenso beteiligt war eine kleine Fokusgruppe blinder und sehbehinderter Menschen, die durch Feedback und Optimierungswünsche wertvolle Hilfe bei der Entwicklung des Modells lieferte. ![Responsives Tastmodell!](./static/img/Insektenmodell_WIP.jpg \"Responsives Tastmodell\")<figcaption>Workshop am nicht-finalen Modell mit Fokusgruppe; Foto: werk5 GmbH</figcaption><startbutton />",
+            "en": null
+          }
         }
+      ]
     },
-    "model": {
-        "src": "./models/main-blender-decimate0.15.glb",
-        "cameraOrbit": "135deg 65deg 917.5m",
-        "fieldOfView": "25deg",
-        "dimensions": {
-            "model": {
-                "width": 28.4,
-                "length": 39.9,
-                "height": 13.1,
-                "unit": "cm"
-                
 
-            },
-            "original": {
-                "width": 12.1,
-                "length": 17.0,
-                "height": 5.6,
-                "unit": "mm"
-            }
+    "aboutCreature": {
+      "title": { "de": "Der Waldmistkäfer", "en": null },
+      "index": 20,
+      "nodes": [
+        {
+          "text": {
+            "de": "Hallo und willkommen zu einer Audiotour über einen kleinen Bewohner unserer heimischen Natur. Hier erfahren Sie nicht nur etwas über Merkmale und Verhaltensweisen des Waldmistkäfers. Sie erhalten auch Informationen aus Forschung und Geschichte, die z.B. erklären, was Mistkäfer mit der Milchstraße, einer Violine oder dem Alten Ägypten verbindet. \n\nDer Waldmistkäfer ist in ganz Europa bis hin zum Westen Sibiriens verbreitet. Er lebt sowohl im Flachland als auch in hohen Gebirgslagen von bis zu 2.000 Metern. Besonders häufig anzutreffen ist er, wie sein Name schon verrät, in bewaldeten Gebieten. \n\nDer Waldmistkäfer sowie andere Mistkäferarten sind in ihren Lebensräumen ein wichtiger Bestandteil des natürlichen Ökosystems. Durch die Entsorgung des Kots anderer Tiere beseitigen sie gleichzeitig auch die darin enthaltenen Krankheitserreger und Parasiten. Durch das Graben tiefer Tunnel tragen sie außerdem zur ständigen Düngung und Belüftung des Bodens bei und gewährleisten damit, dass bei Regen mehr Wasser einsickern kann und dadurch Pflanzen besser versorgt werden.\n\nDie Bedeutung des Mistkäfers wird vor allem dort sichtbar, wo es ihn nicht gibt, z.B. in Australien und Neuseeland. Dort wurden im 19. Jahrhundert große Rinderherden eingeführt. Heimische Insekten können den Rindermist nicht verwerten. Daher kann an jenen Stellen, wo der Mist hinfällt, lange kein Gras nachwachsen und es kommt zu einer raschen Vermehrung von Fliegen und Parasiten. Im Rahmen eines australischen Forschungsprojekts aus den 1960er Jahren wurden Mistkäferarten ausfindig gemacht, die am besten für den Einsatz in Australien geeignet sind. Die ausgewählten Arten leisten seither erfolgreich ihren Dienst und der Leiter des Projekts, George Bornemissza, erhielt für seine Forschung das durch Königin Elisabeth II. etablierte Ehrenzeichen Order of Australia.",
+            "en": null
+          },
+          "audio": "8_1_2_EDIT.mp3"
         },
-        "hotspots": {
-            "front": {
-                "title": "Der Kopf",
-                "position": "0.5294662219192183m 96.78772276603272m 23.388069879016143m",
-                "normal": "0.2782966475959819m 0.7064268677050243m -0.6507780393661929m",
-                "nodes": [
-                    {
-                        "text": "Der Kopf ist wesentlich schmaler als die anderen Körperteile. Am äußeren Ende des Kopfes sitzen die kräftigen, zangenartigen Oberkiefer und darunter feingliedrige Mundwerkzeuge. Die Mundwerkzeuge bestehen aus nach vorne ragenden Lippentastern und Unterkiefern mit Kiefertastern. Der Waldmistkäfer nutzt die Mundwerkzeuge zum Ertasten und Zerkleinern seiner Nahrung, die aus Pilzen, vermodernden Pflanzen, Aas oder Baumsäften bestehen kann. Wie sein Name jedoch verrät, ernährt er sich in erster Linie von Mist, genauer gesagt dem Dung von Kühen, Pferden oder anderen Tieren. \nDer Waldmistkäfer verwertet den Dung meist direkt vor Ort. Es gibt auch Mistkäferarten, die den Kot zu einer Kugel formen und ihn zu einem anderen Ort rollen, um ihn erst dort zu verwenden. \n\nSeitlich vom Kopf des Käfers abgehend befindet sich ein nach außenstehendes Antennenpaar. Umgangssprachlich werden die Antennen auch Fühler genannt, obwohl diese Bezeichnung ihnen nicht gerecht wird, da die Antennen neben einem Tastsinn auch über einen Geruchssinn verfügen.\n\nWie in einer Studie aus dem Jahr 2013 herausgefunden wurde, gibt es Käfer aus der Familie der Blatthornkäfer, die zur Orientierung eine ganz besondere Methode verwenden: dabei klettern sie auf ihre gerollte Mistkugel, um einen besseren Ausblick zu haben. Dort angekommen, drehen sie sich einmal komplett um die eigene Achse und prägen sich dabei das ein, was sie gerade am Himmel sehen: bei Tageslicht ist es die Position der Sonne, bei Nacht der Mond oder auch die Milchstraße. Diesen Schnappschuss des Himmels nutzen sie, um schnellstmöglich ihre Mistkugel ans Ziel zu bringen.",
-                        "audio": "2_1_2.mp3",
-                        "cameraTarget": "60.5294662219192183m 96.78772276603272m 23.388069879016143m",
-                        "cameraOrbit": "-144.6deg 71.65deg 591.1m",
-                        "fieldOfView": "16.33deg"
-                    }
-                ]
+        {
+          "text": { "de": "", "en": "" },
+          "gallery": [
+            {
+              "src": "./static/img/waldmistkaefer_hires_01.jpg",
+              "caption": "Waldmistkäfer; Foto: ©B. Schurian,  MfN"
             },
-            "back": {
-                "title": "Der Deckflügel",
-                "position": "-1.4048900510934743m 146.7454932084455m 233.28108558448116m",
-                "normal": "-0.04756888819627131m 0.9986718140891201m 0.01979415620117785m",
-                "nodes": [
-                    {
-                        "text": "Die Deckflügel sitzen an der Mitte der Brust an. Sie bedecken sowohl die mittleren und hinteren Teile der Brust, als auch den gesamten Hinterleib des Käfers. \n\nDie Deckflügel von Käfern zeigen oftmals eine individuelle Struktur auf. Diese Struktur kann dabei behilflich sein, Käferarten voneinander zu unterscheiden. Beim Waldmistkäfer sind mehrere grobe Längsreihen pro Deckflügel vorzufinden, die sich über die ganze Länge der Deckflügel hinwegziehen.\n\nDie beiden Deckflügel des Waldmistkäfers berühren sich in der Mitte an der sogenannten Flügeldeckennaht. Diese Längslinie zwischen den Flügeln ist gut zu erkennen. Tasten Sie nun langsam von rechts nach links an dieser Linie entlang, in Richtung Kopf. Am linken Ende der Längslinie befindet sich in der Mitte zwischen beiden Flügelhälften das sogenannte „Schildchen“. Es ist an seiner gut ertastbaren Dreiecksform zu finden. Das Schildchen des Waldmistkäfers ist eher klein. Bei anderen Insektenarten kann es wesentlich dominanter ausfallen und dabei sogar den gesamten Hinterleib bedecken.\n\nUnter den festen, schützenden Deckflügeln befinden sich die zusammengefalteten größeren, dünneren und empfindlichen Hinterflügel. Zum Fliegen werden die Deckflügel geöffnet, angehoben und die darunter liegenden Hinterflügel entfaltet.\n\nNach Anheben der festen Deckflügel kann der Käfer durch das Schwingen der Hinterflügel zum Flug ansetzen. Der Waldmistkäfer ist kein guter Flieger. Wegen seines relativ hohen Körpergewichts kommt er nur schwerfällig voran und bleibt dabei meist in Bodennähe. \nÜbrigens können nicht alle Käferarten fliegen. Bei manchen sind die beiden Deckflügel miteinander verwachsen und die Hinterflügel stark zurückgebildet, wie beispielsweise bei einigen Laufkäferarten.",
-                        "audio": "4_1_2.mp3",
-                        "cameraTarget": "-13.760674036217267m 146.81627194015758m 223.48161468108643m",
-                        "cameraOrbit": "7.090503050143415rad 0.4194930488935198rad 674.6011030679799m",
-                        "fieldOfView": "15.845345927463717deg"
-                    }
-                ]
+            {
+              "src": "./static/img/waldmistkaefer_hires_02.jpg",
+              "caption": "Waldmistkäfer; Foto: ©B. Schurian,  MfN"
             },
-            "middle": {
-                "title": "Das Halschild",
-                "position": "-1.8660701473011727m 137.79734781147738m 107.24667991599807m",
-                "normal": "0.06456923327849987m 0.9871901960145668m -0.145898358477908m",
-                "nodes": [
-                    {
-                        "text": "Das Halsschild besteht zu einem großen Teil aus der harten Substanz Chitin. Es ist Bestandteil des Außenskeletts des Käfers, welches auch Exoskelett genannt wird. Es dient dem Schutz von Körper und Organen. Im Gegensatz zu Wirbeltieren wie dem Menschen, besitzen die meisten Insekten und auch der Waldmistkäfer kein Endoskelett im Körperinnern. Stattdessen haben sie ein Exoskelett, das als umfassende und stabile äußere Hülle dient.\n\nWenn man das Halsschild genauer inspiziert, fallen beim Tasten viele kleine punktförmige Vertiefungen auf. Hier am Modell sind sie etwa stecknadelkopfgroß. Diese Eigenschaft hilft dabei, den Waldmistkäfer vom ähnlich aussehenden, etwas größeren „Gemeinen Mistkäfer“ zu unterscheiden: Dessen Halsschild ist gleichmäßig eben.\n\nAbgesehen von den punktförmigen Vertiefungen und anderen feinen Strukturen, fühlt sich die Unter- wie auch die Oberseite des Käfers relativ glatt an. An Kopf und Beinen sowie an vielen Stellen der Körperunterseite hat der Waldmistkäfer jedoch zahlreiche Borsten. An diesem Modell sind die Borsten nicht dargestellt, da sie das Erkennen der eigentlichen Körperstruktur erschweren würden.",
-                        "audio": "3_1_2.mp3",
-                        "cameraTarget": "42.46231444958388m 125.29770889548908m 97.45656759707666m",
-                        "cameraOrbit": "2.650928129335097rad 0.9870971942249388rad 702.4877454003415m",
-                        "fieldOfView": "15.845345927463717deg"
-                    }
-                ]
-            },
-            "right": {
-                "title": "Die Beine",
-                "position": "85.26549738348943m 20.22156691176314m 43.51253920080336m",
-                "normal": "0.7317816006630277m 0.1314322876435322m -0.6687460225645048m",
-                "nodes": [
-                    {
-                        "text": "Auf der Unterseite des Käfers stehen die drei kräftigen Schenkelpaare hervor. Die Vorderbeine helfen als kräftige Grabbeine beim Anlegen von teils über 70 cm tiefen Tunneln und Stollen. Das klingt nicht sehr tief, doch im Verhältnis zu einem Menschen ist das so, als würde man einen etwa 80 Meter tiefen Tunnel mit seinen Händen graben.\n\nlle sechs Beine sind untergliedert in Hüfte, Schenkelring, Schenkel, Schiene, Fuß und Krallen. Die Hüfte liegt direkt an der Körperunterseite an und bildet die Verbindung zum kräftigen und glatten Schenkel. Die daran anschließende Schiene des Beins ist nicht glatt, sondern nach außen hin mit zackenartigen Strukturen versehen.  Diese sind als sogenannte Grableisten und Grabdornen beim Tunnelbau hilfreich. Die Schiene geht über in den wesentlich dünneren fünfgliedrigen Fuß, der am äußersten Ende in zwei Krallen mündet.\n\nDie Tunnel des Waldmistkäfers verfügen über mehrere Nebengänge, die in Kammern enden. Diese dienen als Brutkammern für die im Frühjahr abgelegten Eier, aus denen später die Larven schlüpfen. Bei der Entwicklung ernähren sich die Larven vom Dungvorrat, der bereits vor der Eiablage durch die Eltern in den Kammern angelegt wurde. Erst im darauffolgenden Frühjahr verpuppen sich die Larven. Im Sommer schlüpfen schließlich die Käfer aus den Puppen und krabbeln aus den Tunneln heraus.",
-                        "audio": "5_1_2_EDIT.mp3",
-                        "cameraTarget":"0m 79.39078426361084m 190.2510633468628m",
-                        "cameraOrbit":"2.356194490192345rad 1.1344640137963142rad 917.5m",
-                        "fieldOfView":"26.525408440450228deg"
-                    }
-                ]
-            },
-            "bottom": {
-                "title": "Stridulationspunkte",
-                "position": "55.81299010109351m 28.276981345245083m 243.9637305905755m",
-                "normal": "0.4332089369066213m -0.9012170744078584m -0.011738900288177812m",
-                "nodes": [
-                    {
-                        "text": "Wie viele andere Insekten erzeugt der Waldmistkäfer Geräusche, indem er zwei Körperteile aneinander reibt, vergleichbar mit den Saiten einer Violine, die durch das Streichen mit dem Bogen zum Schwingen angeregt werden.\n\nDie genaue Stelle befindet sich an der Hüfte des hintersten Beinpaares. Da sie sich auf der dem Körper zugewandten Seite der Hüfte befindet, kann sie an diesem Modell nicht genauer angeschaut werden. Die Stelle besteht aus einer mit feinen Rippen ausgebildeten Oberfläche. Die gerippte Fläche wird so über die darüber liegenden, harten Bauchplatten gerieben, dass dadurch Geräusche entstehen. Diese Form der Lauterzeugung wird Stridulation genannt.\n\nDas erzeugte Geräusch ist so laut, dass selbst wir es hören können. Hält man einen Waldmistkäfer z.B. in der Hand, kann man deutlich seine Protestlaute wahrnehmen. Die Käfer erzeugen nicht nur Laute, um zu protestieren. Sie tun dies beispielsweise auch, um auf Partnersuche zu gehen. Hören Sie nun einen Waldmistkäfer in Aktion mit einer Aufnahme aus dem Tierstimmenarchiv des Museums für Naturkunde Berlin.",
-                        "audio": "6_1_2.mp3",
-                        "cameraTarget": "0m 79.39078426361084m 190.2510633468628m",
-                        "cameraOrbit": "0.613033349070057rad 2.233696225921933rad 743.5552809759049m",
-                        "fieldOfView": "18.44652166126477deg"
-                    },
-                    {
-                        "text": "Hören Sie nun einen Waldmistkäfer in Aktion mit einer Aufnahme aus dem Tierstimmenarchiv des Museums für Naturkunde Berlin.\n[Der Waldmiskäfer im Datenportal](https://portal.museumfuernaturkunde.berlin/search?query=%7B%22q%22%3A%22%22%2C%22filters%22%3A%7B%22key_value%22%3A%5B%7B%22key%22%3A%22taxa%22%2C%22value%22%3A%5B%22Anoplotrupes%20stercorosus%22%5D%7D%5D%7D%7D \"Zeige mehr Medien zum Waldmistkäfer im Datenportal vom Museum für Naturkunde Berlin\")",
-                        "audio": "6_1_3.mp3"
-                    }
-                ]
+            {
+              "src": "./static/img/waldmistkaefer_hires_03.jpg",
+              "caption": "Waldmistkäfer; Foto: ©B. Schurian,  MfN"
             }
+          ]
         }
+      ]
+    },
+    "aboutAmulet": {
+      "index": 30,
+      "title": { "de": "Käfer im Alten Ägypten", "en": null },
+      "nodes": [
+        {
+          "text": {
+            "de": "![Käferamulet!](./static/img/jewel.webp \"Käferamulet\")<figcaption>Im Alten Ägypten galt der heilige Pillendreher als Symbol für den Kreislauf der Sonne und für die Auferstehung. Die Sonne ist in diesem Amulett mit abgebildet. Sie kann als runde, leicht gewölbte Stelle in der Mitte oben, direkt über dem Käfer, betrachtet werden</figcaption>",
+            "en": null
+          }
+        },
+        {
+          "text": {
+            "de": "Käfermodelle erfreuen sich schon lange großer Beliebtheit. So wurden sie als Schmuckstück oder Plastik bereits vor über 4.000 Jahren im Alten Ägypten gefertigt. Kleine Käferamulette, genannt Skarabäen, waren begehrte Schmuckobjekte und haben in Ägypten bis heute eine Bedeutung als Glücksbringer.\n\nVorlage für diese Modelle ist der sogenannte heilige Pillendreher aus der Familie der Blatthornkäfer. Er dreht kleine Kugeln bzw. Pillen aus Dung, klemmt diese zwischen seine Hinterbeine und rollt sie rückwärts laufend vor sich her. Im Alten Ägypten galt der heilige Pillendreher als Symbol für den Kreislauf der Sonne und für die Auferstehung. Die Sonne ist in diesem Amulett mit abgebildet. Sie kann als runde, leicht gewölbte Stelle in der Mitte oben, direkt über dem Käfer, betrachtet werden.\n\nKäfermodelle wurden den Toten auch als Grabbeigabe mitgegeben, da man an ihre Schutzfunktion im Jenseits glaubte. So befanden sich beispielsweise im Grab des Pharaos Tutanchamun gleich mehrere aufwändig gestaltete Skarabäus-Schmuckstücke. Das Besondere an diesem – hier vereinfacht dargestelltem – Amulett ist, dass es auch ägyptische Hieroglyphen-Schriftzeichen enthält.\n\nDiese Hieroglyphen sind im Amulett als ausgewölbte Symbole erkennbar: mittig am unteren Rand ist ein Halbkreis als kleine Auswölbung ertastbar. Dieser stellt eine Korb-Hieroglyphe dar. Darüber befindet sich die Käfer-Hieroglyphe. Oberhalb davon ist schließlich ein kreisrundes Zeichen, das für den Sonnengott „Ra“ steht. Diese Zeichen stellen zusammen den Thronnamen Tutanchamuns dar. Das ist jener Name, den er anlässlich seiner Krönung erhielt. Ausgesprochen heißt dieser Thronname „Neb-cheperu-Ra“. Das Käfersymbol ist also Teil des Herrschertitels von Tutanchamun.",
+            "en": null
+          },
+          "audio": "7_1_2_EDIT_2.mp3"
+        }
+      ]
+    },
+    "aboutProject": {
+      "index": 40,
+      "title": { "de": "Über dieses Projekt", "en": null },
+      "nodes": [
+        {
+          "text": {
+            "de": "Das Museum für Naturkunde verfügt über eine Sammlung von rund 30 Millionen Objekten, wovon sich 15 Millionen in der Insektensammlung befinden. Inspiriert durch die am Haus stattfindende Insektendigitalisierung sowie die durch die angebotenen Tasterlebnistouren für sehbehinderte Menschen, ernennt die Mediasphere das Museum einen heimischen Waldmistkäfer zum „Star“ und entwickelte daraus ein im Maßstab 1:20 vergrößertes Tastmodell. Ziel des Projekts war ist jedoch kein nicht die Entwicklung eines reinesn Tastmodells, sondern die eines sensorisch-taktilesn Interaktionsmodells zur barrierefreien Wissensvermittlung. ![Responsives Tastmodell!](./static/img/scan_microct.jpg)<figcaption>Scan aus dem Mikro-CT-Labor des Museums; Autorinnen: Kristin Mahlow, Eva-Maria Unglaube, Eva Patzschke</figcaption>\nDas Tastmodell basiert auf einem Scan aus dem Mikro-CT-Labor des Museums und ist mit maßgeschneiderter Technologie in Form einer sensorischen Oberfläche ausgestattet. Wird diese berührt, so löst dies die Wiedergabe von Audiofeedback zum jeweils berührten Körperbereich aus. So können auch Menschen mit Sehbehinderung das Modell völlig selbstständig erleben. Braille- und Profilschrift, die sich auf dem Sockel der Taststation befinden, ergänzen die Audiotexte. Die Taststation verfügt u.a. über ein 3D-Abbild des Waldmistkäfers in Originalgröße, das den Größenvergleich mit dem hochskalierten Käfer ermöglicht.![Responsives Tastmodell!](./static/img/waldmistkaefer_og_vergleich.jpg)<figcaption>Grafik der Taststation, die Käfer in Originalgröße zeigt; Grafik: werk5 GmbH</figcaption>",
+            "en": null
+          }
+        },
+        {
+          "text": {
+            "de": "Das Ergebnis ist ein anpassungsfähiges, intelligentes und taktiles Modell, das Nutzer*innen, Institutionen und Modellbauunternehmen gleichermaßen inspirieren soll. Durchgeführt wurde das Projekt von einem interdisziplinären Team aus den Bereichen Biologie, Labortechnik, Modellbau, Softwareentwicklung, Medienwissenschaften sowie Bildung und Inklusion. Hierbei wurde das Museum bei der Konzeption und Umsetzung des Exponats durch das Modellbauunternehmen werk5 GmbH unterstützt. Die Entwicklung des CMS und technischen Kerns des „Taktilen Lernens“ wurden durch den Kooperationspartner Interactive Scape GmbH übernommen. Expertise in Sachen Barrierefreiheit erhielt das Projektteam durch Ellen Schweizer von schweizergestaltung. Das gesamte Entwicklungsteam erhielt Feedback und Ideen von einer Fokusgruppe blinder und sehbehinderter Testpersonen, die das Projekt phasenweise begleiteten.\n\nDas Modell wurde auf der LEARNTEC 2023 mit einem Delina-Innovations-Award in der Kategorie „Gesellschaft und lebenslanges Lernen“ ausgezeichnet. Mehr Informationen zum Projekt befinden sich im [Blogbeitrag](https://mediasphere.museumfuernaturkunde.berlin/de/blog/2022/08/18/digitalisierung-zum-anfassen-teil-2/) der Mediasphere For Nature.",
+            "en": null
+          }
+        }
+      ]
     }
+  },
+  "model": {
+    "src": "./models/main-blender-decimate0.15.glb",
+    "cameraOrbit": "135deg 65deg 917.5m",
+    "fieldOfView": "25deg",
+    "dimensions": {
+      "model": {
+        "width": 28.4,
+        "length": 39.9,
+        "height": 13.1,
+        "unit": "cm"
+      },
+      "original": {
+        "width": 12.1,
+        "length": 19.0,
+        "height": 5.6,
+        "unit": "mm"
+      }
+    },
+    "hotspots": {
+      "front": {
+        "title": { "de": "Der Kopf", "en": null },
+        "position": "0.5294662219192183m 96.78772276603272m 23.388069879016143m",
+        "normal": "0.2782966475959819m 0.7064268677050243m -0.6507780393661929m",
+        "nodes": [
+          {
+            "text": {
+              "de": "Der Kopf ist wesentlich schmaler als die anderen Körperteile. Am äußeren Ende des Kopfes sitzen die kräftigen, zangenartigen Oberkiefer und darunter feingliedrige Mundwerkzeuge. Die Mundwerkzeuge bestehen aus nach vorne ragenden Lippentastern und Unterkiefern mit Kiefertastern. Der Waldmistkäfer nutzt die Mundwerkzeuge zum Ertasten und Zerkleinern seiner Nahrung, die aus Pilzen, vermodernden Pflanzen, Aas oder Baumsäften bestehen kann. Wie sein Name jedoch verrät, ernährt er sich in erster Linie von Mist, genauer gesagt dem Dung von Kühen, Pferden oder anderen Tieren. \nDer Waldmistkäfer verwertet den Dung meist direkt vor Ort. Es gibt auch Mistkäferarten, die den Kot zu einer Kugel formen und ihn zu einem anderen Ort rollen, um ihn erst dort zu verwenden. \n\nSeitlich vom Kopf des Käfers abgehend befindet sich ein nach außenstehendes Antennenpaar. Umgangssprachlich werden die Antennen auch Fühler genannt, obwohl diese Bezeichnung ihnen nicht gerecht wird, da die Antennen neben einem Tastsinn auch über einen Geruchssinn verfügen.\n\nWie in einer Studie aus dem Jahr 2013 herausgefunden wurde, gibt es Käfer aus der Familie der Blatthornkäfer, die zur Orientierung eine ganz besondere Methode verwenden: dabei klettern sie auf ihre gerollte Mistkugel, um einen besseren Ausblick zu haben. Dort angekommen, drehen sie sich einmal komplett um die eigene Achse und prägen sich dabei das ein, was sie gerade am Himmel sehen: bei Tageslicht ist es die Position der Sonne, bei Nacht der Mond oder auch die Milchstraße. Diesen Schnappschuss des Himmels nutzen sie, um schnellstmöglich ihre Mistkugel ans Ziel zu bringen.",
+              "en": null
+            },
+            "audio": "2_1_2.mp3",
+            "cameraTarget": "60.5294662219192183m 96.78772276603272m 23.388069879016143m",
+            "cameraOrbit": "-144.6deg 71.65deg 591.1m",
+            "fieldOfView": "16.33deg"
+          }
+        ]
+      },
+      "back": {
+        "title": { "de": "Die Deckflügel", "en": null },
+        "position": "-1.4048900510934743m 146.7454932084455m 233.28108558448116m",
+        "normal": "-0.04756888819627131m 0.9986718140891201m 0.01979415620117785m",
+        "nodes": [
+          {
+            "text": {
+              "de": "Die Deckflügel sitzen an der Mitte der Brust an. Sie bedecken sowohl die mittleren und hinteren Teile der Brust, als auch den gesamten Hinterleib des Käfers. \n\nDie Deckflügel von Käfern zeigen oftmals eine individuelle Struktur auf. Diese Struktur kann dabei behilflich sein, Käferarten voneinander zu unterscheiden. Beim Waldmistkäfer sind mehrere grobe Längsreihen pro Deckflügel vorzufinden, die sich über die ganze Länge der Deckflügel hinwegziehen.\n\nDie beiden Deckflügel des Waldmistkäfers berühren sich in der Mitte an der sogenannten Flügeldeckennaht. Diese Längslinie zwischen den Flügeln ist gut zu erkennen. Am Ende der Längslinie befindet sich in der Mitte zwischen beiden Flügelhälften das sogenannte „Schildchen“. Es ist an seiner gut ertastbaren Dreiecksform zu finden. Das Schildchen des Waldmistkäfers ist eher klein. Bei anderen Insektenarten kann es wesentlich dominanter ausfallen und dabei sogar den gesamten Hinterleib bedecken.\n\nUnter den festen, schützenden Deckflügeln befinden sich die zusammengefalteten größeren, dünneren und empfindlichen Hinterflügel. Zum Fliegen werden die Deckflügel geöffnet, angehoben und die darunter liegenden Hinterflügel entfaltet.\n\nNach Anheben der festen Deckflügel kann der Käfer durch das Schwingen der Hinterflügel zum Flug ansetzen. Der Waldmistkäfer ist kein guter Flieger. Wegen seines relativ hohen Körpergewichts kommt er nur schwerfällig voran und bleibt dabei meist in Bodennähe. \nÜbrigens können nicht alle Käferarten fliegen. Bei manchen sind die beiden Deckflügel miteinander verwachsen und die Hinterflügel stark zurückgebildet, wie beispielsweise bei einigen Laufkäferarten.",
+              "en": null
+            },
+            "audio": "4_1_2_EDIT.mp3",
+            "cameraTarget": "-13.760674036217267m 146.81627194015758m 223.48161468108643m",
+            "cameraOrbit": "7.090503050143415rad 0.4194930488935198rad 674.6011030679799m",
+            "fieldOfView": "15.845345927463717deg"
+          }
+        ]
+      },
+      "middle": {
+        "title": { "de": "Das Halschild", "en": null },
+        "position": "-1.8660701473011727m 137.79734781147738m 107.24667991599807m",
+        "normal": "0.06456923327849987m 0.9871901960145668m -0.145898358477908m",
+        "nodes": [
+          {
+            "text": {
+              "de": "Das Halsschild besteht zu einem großen Teil aus der harten Substanz Chitin. Es ist Bestandteil des Außenskeletts des Käfers, welches auch Exoskelett genannt wird. Es dient dem Schutz von Körper und Organen. Im Gegensatz zu Wirbeltieren wie dem Menschen, besitzen die meisten Insekten und auch der Waldmistkäfer kein Endoskelett im Körperinnern. Stattdessen haben sie ein Exoskelett, das als umfassende und stabile äußere Hülle dient.\n\nWenn man das Halsschild genauer inspiziert, fallen viele kleine punktförmige Vertiefungen auf. Hier am Modell sind sie etwa stecknadelkopfgroß. Diese Eigenschaft hilft dabei, den Waldmistkäfer vom ähnlich aussehenden, etwas größeren „Gemeinen Mistkäfer“ zu unterscheiden. Dessen Halsschild ist gleichmäßig eben.\n\nAbgesehen von den punktförmigen Vertiefungen und anderen feinen Strukturen, fühlt sich die Unter- wie auch die Oberseite des Käfers relativ glatt an. An Kopf und Beinen sowie an vielen Stellen der Körperunterseite hat der Waldmistkäfer jedoch zahlreiche Borsten. An diesem Modell sind die Borsten nicht dargestellt, da sie das Erkennen der eigentlichen Körperstruktur erschweren würden.",
+              "en": null
+            },
+            "audio": "3_1_2_EDIT.mp3",
+            "cameraTarget": "42.46231444958388m 125.29770889548908m 97.45656759707666m",
+            "cameraOrbit": "2.650928129335097rad 0.9870971942249388rad 702.4877454003415m",
+            "fieldOfView": "15.845345927463717deg"
+          }
+        ]
+      },
+      "right": {
+        "title": { "de": "Die Beine", "en": null },
+        "position": "85.26549738348943m 20.22156691176314m 43.51253920080336m",
+        "normal": "0.7317816006630277m 0.1314322876435322m -0.6687460225645048m",
+        "nodes": [
+          {
+            "text": {
+              "de": "Auf der Unterseite des Käfers stehen die drei kräftigen Schenkelpaare hervor. Die Vorderbeine helfen als kräftige Grabbeine beim Anlegen von teils über 70 cm tiefen Tunneln und Stollen. Das klingt nicht sehr tief, doch im Verhältnis zu einem Menschen ist das so, als würde man einen etwa 80 Meter tiefen Tunnel mit seinen Händen graben.\n\nAlle sechs Beine sind untergliedert in Hüfte, Schenkelring, Schenkel, Schiene, Fuß und Krallen. Die Hüfte liegt direkt an der Körperunterseite an und bildet die Verbindung zum kräftigen und glatten Schenkel. Die daran anschließende Schiene des Beins ist nicht glatt, sondern nach außen hin mit zackenartigen Strukturen versehen. Diese sind als sogenannte Grableisten und Grabdornen beim Tunnelbau hilfreich. Die Schiene geht über in den wesentlich dünneren fünfgliedrigen Fuß, der am äußersten Ende in zwei Krallen mündet.\n\nDie Tunnel des Waldmistkäfers verfügen über mehrere Nebengänge, die in Kammern enden. Diese dienen als Brutkammern für die im Frühjahr abgelegten Eier, aus denen später die Larven schlüpfen. Bei der Entwicklung ernähren sich die Larven vom Dungvorrat, der bereits vor der Eiablage durch die Eltern in den Kammern angelegt wurde. Erst im darauffolgenden Frühjahr verpuppen sich die Larven. Im Sommer schlüpfen schließlich die Käfer aus den Puppen und krabbeln aus den Tunneln heraus.",
+              "en": null
+            },
+            "audio": "5_1_2_EDIT.mp3",
+            "cameraTarget": "0m 79.39078426361084m 190.2510633468628m",
+            "cameraOrbit": "2.356194490192345rad 1.1344640137963142rad 917.5m",
+            "fieldOfView": "26.525408440450228deg"
+          }
+        ]
+      },
+      "bottom": {
+        "title": { "de": "Stridulationspunkte", "en": null },
+        "position": "55.81299010109351m 28.276981345245083m 243.9637305905755m",
+        "normal": "0.4332089369066213m -0.9012170744078584m -0.011738900288177812m",
+        "nodes": [
+          {
+            "text": {
+              "de": "Wie viele andere Insekten erzeugt der Waldmistkäfer Geräusche, indem er zwei Körperteile aneinander reibt, vergleichbar mit den Saiten einer Violine, die durch das Streichen mit dem Bogen zum Schwingen angeregt werden.\n\nDie genaue Stelle befindet sich an der Hüfte des hintersten Beinpaares. Da sie sich auf der dem Körper zugewandten Seite der Hüfte befindet, kann sie an diesem Modell nicht genauer angeschaut werden. Die Stelle besteht aus einer mit feinen Rippen ausgebildeten Oberfläche. Die gerippte Fläche wird so über die darüber liegenden, harten Bauchplatten gerieben, dass dadurch Geräusche entstehen. Diese Form der Lauterzeugung wird Stridulation genannt.\n\nDas erzeugte Geräusch ist so laut, dass selbst wir es hören können. Hält man einen Waldmistkäfer z.B. in der Hand, kann man deutlich seine Protestlaute wahrnehmen. Die Käfer erzeugen nicht nur Laute, um zu protestieren. Sie tun dies beispielsweise auch, um auf Partnersuche zu gehen. Hören Sie nun einen Waldmistkäfer in Aktion mit einer Aufnahme aus dem Tierstimmenarchiv des Museums für Naturkunde Berlin.",
+              "en": null
+            },
+            "audio": "6_1_2.mp3",
+            "cameraTarget": "0m 79.39078426361084m 190.2510633468628m",
+            "cameraOrbit": "0.613033349070057rad 2.233696225921933rad 743.5552809759049m",
+            "fieldOfView": "18.44652166126477deg"
+          },
+          {
+            "text": {
+              "de": "Hören Sie nun einen Waldmistkäfer in Aktion mit einer Aufnahme aus dem Tierstimmenarchiv des Museums für Naturkunde Berlin.",
+              "en": null
+            },
+            "audio": "6_1_3.mp3"
+          }
+        ]
+      }
+    }
+  }
 }
