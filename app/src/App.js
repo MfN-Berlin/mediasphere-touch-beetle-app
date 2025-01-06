@@ -62,7 +62,7 @@ function App() {
 
   useEffect(() => {
     setData();
-    fetch("./data.json")
+    fetch("./data.autotranslated.json")
       .then((response) => response.json())
       .then((data) => setData(data))
       .catch((e) => {
