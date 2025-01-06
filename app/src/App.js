@@ -42,10 +42,6 @@ function App() {
     "enableExternalLinks"
   );
 
-
-
-
-
   /** Load data.json */
   const [data, setData] = useState();
   const [ready, setReady] = useState(false);
@@ -71,23 +67,26 @@ function App() {
   }, []);
 
   // Use browserlang as default
-  const [language, setLanguage] = useState( (navigator.language || navigator.userLanguage).split('-')[0] )
+  const [language, setLanguage] = useState(
+    (navigator.language || navigator.userLanguage).split("-")[0]
+  );
   const getString = useCallback(
     (key, path = "strings") => {
       if (!data) return "";
       const address = `${path}.${key}.${language}`;
       const value = get(data, address);
-      if ( typeof value !== 'string' ) console.warn("Missing or invalid translation: " + address);
+      if (typeof value !== "string")
+        console.warn("Missing or invalid translation: " + address);
       return value;
     },
     [data, language]
   );
 
-  useEffect( () => {
-    if( data ){
-      if( !Object.keys(data.languages).includes(language) ) setLanguage('de')
+  useEffect(() => {
+    if (data) {
+      if (!Object.keys(data.languages).includes(language)) setLanguage("de");
     }
-  }, [data, language] )
+  }, [data, language]);
 
   useEffect(() => {
     document.title = getString("documentTitle");
@@ -324,15 +323,23 @@ function App() {
             onClose={() => setMenuAnchor()}
           >
             {data &&
-              ready && Object.keys(data.languages).length > 1 &&
+              ready &&
+              Object.keys(data.languages).length > 1 &&
               Object.keys(data.languages)
-                .map((lang) => {
+                .map((lang, index ) => {
                   return (
-                    <MenuItem key={`menuitem-language-${lang}`} onClick={() => setLanguage(lang)}>
+                    <MenuItem
+                      key={`menuitem-language-${lang}`}
+                      onClick={() => setLanguage(lang)}
+                      sx={{
+                        color: lang === language ? theme => theme.palette.primary.main : "text.secondary",
+                        //textDecoration:(lang === language ? 'underline' : 'none') ,
+                      }}
+                    >
                       <ListItemIcon
                         sx={{
-                          color: "text.secondary",
-                          opacity: lang === language ? 1 : 0.1,
+                          color:'text.secondary',
+                          visibility:index === 0 ? 'visible' : 'hidden'
                         }}
                         fontSize="small"
                       >
@@ -409,19 +416,19 @@ function App() {
       </Box>
 
       {/** Model */}
-      { data &&  
-      <ModelViewer
-        data={data}
-        getString={getString}
-        showDimensions={showDimensions}
-        dimensionsSelector={showModelDimensions ? "model" : "original"}
-        showHotspots={showHotspots}
-        setReady={setReady}
-        interactive={modelInteractive}
-        mobile={mobile}
-        disableExternalLinks={disableExternalLinks}
-      />
-}
+      {data && (
+        <ModelViewer
+          data={data}
+          getString={getString}
+          showDimensions={showDimensions}
+          dimensionsSelector={showModelDimensions ? "model" : "original"}
+          showHotspots={showHotspots}
+          setReady={setReady}
+          interactive={modelInteractive}
+          mobile={mobile}
+          disableExternalLinks={disableExternalLinks}
+        />
+      )}
 
       {/** Footer */}
       <Box
@@ -540,7 +547,7 @@ function App() {
       )}
 
       {/** Model-independent info frame */}
-      {data && infoFrameId && ready &&  (
+      {data && infoFrameId && ready && (
         <DataFrame
           disableExternalLinks={disableExternalLinks}
           mobile={mobile}
