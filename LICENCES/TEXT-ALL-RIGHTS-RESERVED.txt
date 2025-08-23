@@ -1,0 +1,17 @@
+All Rights Reserved / Alle Rechte vorbehalten
+=============================================
+
+Copyright (c) 2025 Museum für Naturkunde Berlin
+
+English:
+The textual content of this repository (including documentation, descriptions,
+articles, and other written works) is protected by copyright and all rights are
+reserved. No part of this content may be reproduced, distributed, or modified
+in any form without prior written permission from the Museum für Naturkunde Berlin.
+
+Deutsch:
+Die textuellen Inhalte dieses Repositories (einschließlich Dokumentation,
+Beschreibungen, Artikeln und anderer schriftlicher Werke) sind urheberrechtlich
+geschützt, und alle Rechte sind vorbehalten. Kein Teil dieser Inhalte darf ohne
+vorherige schriftliche Genehmigung des Museums für Naturkunde Berlin
+reproduziert, verbreitet oder verändert werden.

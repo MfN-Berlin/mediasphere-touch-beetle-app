@@ -28,3 +28,14 @@ rushx start
 # Or build
 rushx build
 ```
+
+## Lizenzierung
+
+Dieses Repository verwendet **unterschiedliche Lizenzen für verschiedene Inhalte**:
+
+- **Code**: Lizenziert unter der [MIT-Lizenz](./LICENSE) © 2025 Museum für Naturkunde Berlin.
+- **Assets (Bilder, Videos, Modelle)**: Lizenziert unter
+  [Creative Commons Namensnennung - Nicht kommerziell - Keine Bearbeitungen 4.0 International](./LICENSES/ASSETS-CC-BY-NC-ND-4.0.txt).
+- **Textinhalte** (Dokumentation, Beschreibungen, Artikel): Alle Rechte vorbehalten,
+  Museum für Naturkunde Berlin.
+  Siehe [TEXT-ALL-RIGHTS-RESERVED](./LICENSES/TEXT-ALL-RIGHTS-RESERVED.txt).
