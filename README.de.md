@@ -1,11 +1,17 @@
+# Digitale Reproduktion des responsiven Käfers
+
 [![Static Badge](https://img.shields.io/badge/lang-en-grey)](./README.md)
 [![Static Badge](https://img.shields.io/badge/lang-de-blue)](./README.de.md)
 
-# Responsiver Tastkäfer
+Ausgangspunkt für das Projekt ist ein 3D-Scan eines Waldmistkäfers aus der Sammlung des Museum für Naturkunde in Berlin. Das Museum verfügt über eine riesige Sammlung von rund 30 Millionen Objekten. Die Hälfte davon ist in der Insektensammlung zu finden. Das Museum hat sich zum Ziel gesetzt, seine Sammlung nicht nur zu bewahren und zu digitalisieren, sondern sie auch für innovative Nachnutzungszwecke zu verwenden, z. B. für künstlerische Arbeiten oder Produktentwicklungen in Zusammenarbeit mit der Wirtschaft.
 
-Ausgangsbasis für das taktile Modell ist der 3D-Scan eines Waldmistkäfers aus Sammlung des Museums. Die 3D-Daten mussten von unseren Projektleiter*innen für die Reproduktion als Modell aufbereitet werden. Dank hochaufgelöster Fotografien des Käfers konnten auch filigranste Körperstellen mit dem digitalen Zwilling abgeglichen werden, um den Waldmistkäfer möglichst lebensecht nachzubauen.
+Eines dieser Kooperationsprojekte brachte Mediasphere For Nature (das museumseigene Lab für digitale Medien) mit dem Modellbauunternehmen werk5 zusammen. Gemeinsam entwickelten sie ein responsives Modell eines Waldmistkäfers, das auch für blinde und sehbehinderte Menschen geeignet ist.
 
-[Mehr erfahren auf der Website von WERK5.](https://werk5.com/projekte/responsiver_tastkaefer/)
+Ziel der digitalen Reproduktion ist es, die Zugänglichkeit zum Projekt zu erweitern und zusätzliche Barrierefreiheit, z.B. durch Gebärdensprachvideos, zu ermöglichen.
+
+Hierfür mussten die 3D-Daten von unseren Projektleitern für die Reproduktion als Modell aufbereitet werden. Dank hochauflösender Fotografien des Käfers konnten auch filigranste Körperstellen mit dem digitalen Zwilling abgeglichen werden, um den Wakdmistkäfer möglich lebensecht nachzubauen.
+
+[Erfahren Sie mehr über die Entwicklung des Tastmodells auf der Website von werk5.](https://werk5.com/projekte/responsiver_tastkaefer/)
 
 ## App
 
@@ -31,11 +37,25 @@ rushx build
 
 ## Lizenzierung
 
-Dieses Repository verwendet **unterschiedliche Lizenzen für verschiedene Inhalte**:
+Dieses Repository verwendet **unterschiedliche Lizenzen für verschiedene Arten von Inhalten**:
 
 - **Code**: Lizenziert unter der [MIT-Lizenz](./LICENSE) © 2025 Museum für Naturkunde Berlin.
 - **Assets (Bilder, Videos, Modelle)**: Lizenziert unter
-  [Creative Commons Namensnennung - Nicht kommerziell - Keine Bearbeitungen 4.0 International](./LICENSES/ASSETS-CC-BY-NC-ND-4.0.txt).
-- **Textinhalte** (Dokumentation, Beschreibungen, Artikel): Alle Rechte vorbehalten,
-  Museum für Naturkunde Berlin.
-  Siehe [TEXT-ALL-RIGHTS-RESERVED](./LICENSES/TEXT-ALL-RIGHTS-RESERVED.txt).
+  [Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International](./LICENSES/CC-BY-NC-ND-4.0.txt).
+- **Text- und Audioinhalte** (Dokumentation, Beschreibungen, Artikel, Audiodateien): [Alle Rechte vorbehalten](./LICENSES/ALL-RIGHTS-RESERVED.txt).
+
+### Ausnahmen
+
+#### Lizenziert unter [CC-BY-SA](./LICENSES/CC-BY-SA.txt)
+
+- [./app/public/audio/6_1_3.mp3](./app/public/audio/6_1_3.mp3)
+
+#### Lizenziert unter [CC-BY](./LICENSES/CC-BY.txt) (Museum für Naturkunde Berlin)
+
+- [scan_microct.jpg](./app/public/static/img/scan_microct.jpg)
+
+#### Lizenziert unter [CC-BY](./LICENSES/CC-BY.txt) (Bernhart Schurian)
+
+- [waldmistkaefer_hires_03.jpg](./app/public/static/img/waldmistkaefer_hires_03.jpg)
+- [waldmistkaefer_hires_01.jpg](./app/public/static/img/waldmistkaefer_hires_01.jpg)
+- [waldmistkaefer_hires_02.jpg](./app/public/static/img/waldmistkaefer_hires_02.jpg)
