@@ -54,7 +54,7 @@ Dieses Repository verwendet **unterschiedliche Lizenzen für verschiedene Arten 
 
 - [scan_microct.jpg](./app/public/static/img/scan_microct.jpg)
 
-#### Lizenziert unter [CC-BY](./LICENSES/CC-BY.txt) (Bernhart Schurian)
+#### Lizenziert unter [CC-BY](./LICENSES/CC-BY.txt) (Bernhard Schurian)
 
 - [waldmistkaefer_hires_03.jpg](./app/public/static/img/waldmistkaefer_hires_03.jpg)
 - [waldmistkaefer_hires_01.jpg](./app/public/static/img/waldmistkaefer_hires_01.jpg)

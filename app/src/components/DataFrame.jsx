@@ -1,3 +1,4 @@
+import React from 'react';
 import {
   Typography,
   Box,
@@ -84,6 +85,10 @@ const DataFrame = forwardRef((props, ref) => {
     }
   }, [index, data, reset]);
 
+
+
+
+
   // useEffect(() => {
   //     console.log({ data, index, node })
   // }, [data, index, node])
@@ -115,6 +120,7 @@ const DataFrame = forwardRef((props, ref) => {
 
   if (!data || !node) return <Box ref={ref} />;
   //console.log( Boolean(node.audio) && autoScroll && isPlaying, Boolean(node.audio), autoScroll, isPlaying)
+
 
   return (
     <Box
@@ -295,7 +301,9 @@ const DataFrame = forwardRef((props, ref) => {
             fullHeightHover
           >
             {node.gallery.map((props, i) => {
-              const { src, caption } = props;
+              const { src } = props;
+              const caption = getString("caption", getStringPath + '.nodes.' + index + ".gallery." + i )
+              console.log(src, props, caption,  getStringPath + '.nodes.' + index + ".gallery." + i )
               return (
                 <Box
                   key={`ci-${i}`}
@@ -361,7 +369,7 @@ const DataFrame = forwardRef((props, ref) => {
               <Box sx={{ flexGrow: 1 }} onMouseMove={updateWSX}>
                 <WaveSurferComponent
                   ref={wavesurfer}
-                  url={`./audio/${node.audio}`}
+                  url={`./audio/${ getString("audio", getStringPath + '.nodes.' + index ) }`}
                   onAudioEnded={onAudioEnded}
                   onAudioProgress={setAudioProgress}
                   onPlayPause={onPlayPause}

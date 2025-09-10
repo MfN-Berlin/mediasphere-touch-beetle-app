@@ -54,7 +54,7 @@ This repository uses **different licenses for different types of content**:
 
 - [scan_microct.jpg](./app/public/static/img/scan_microct.jpg)
 
-#### Licensed under [CC-BY](./LICENSES/CC-BY.txt) (Bernhart Schurian)
+#### Licensed under [CC-BY](./LICENSES/CC-BY.txt) (Bernhard Schurian)
 
 - [waldmistkaefer_hires_03.jpg](./app/public/static/img/waldmistkaefer_hires_03.jpg)
 - [img/waldmistkaefer_hires_01.jpg](./app/public/static/img/waldmistkaefer_hires_01.jpg)

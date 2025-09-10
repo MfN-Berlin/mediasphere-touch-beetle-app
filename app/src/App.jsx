@@ -17,7 +17,7 @@ import {
   alpha,
   useMediaQuery,
 } from "@mui/material";
-import { DataContext } from "./DataProvider";
+import { DataContext } from "./DataProvider.jsx";
 
 import ViewInArIcon from "@mui/icons-material/ViewInAr";
 import CircleIcon from "@mui/icons-material/Circle";
@@ -34,7 +34,7 @@ import SearchIcon from "@mui/icons-material/Search";
 import CloseIcon from "@mui/icons-material/Close";
 import LanguageIcon from "@mui/icons-material/Language";
 
-import DataFrame from "./components/DataFrame";
+import DataFrame from "./components/DataFrame.jsx";
 import { get } from "lodash";
 
 function App() {
@@ -58,7 +58,7 @@ function App() {
 
   useEffect(() => {
     setData();
-    fetch("./data.autotranslated.json")
+    fetch("./data.json")
       .then((response) => response.json())
       .then((data) => setData(data))
       .catch((e) => {

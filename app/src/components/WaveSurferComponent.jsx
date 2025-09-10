@@ -1,3 +1,4 @@
+import React from 'react';
 import { Box } from "@mui/material"
 import { forwardRef, useEffect, useImperativeHandle, useRef, useState } from "react"
 import WaveSurfer from "wavesurfer.js";
