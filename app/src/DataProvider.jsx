@@ -78,7 +78,7 @@ const DataProvider = props => {
                     },
                 }, MuiLink: {
                     defaultProps: {
-                        target: '_blank',
+                        //target: '_blank',
                         underline: 'none'
                     }, styleOverrides: {
                         root: {

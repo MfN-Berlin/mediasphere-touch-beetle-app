@@ -38,9 +38,8 @@ import DataFrame from "./components/DataFrame.jsx";
 import { get } from "lodash";
 
 function App() {
-  const disableExternalLinks = !new URLSearchParams(window.location.search).has(
-    "enableExternalLinks"
-  );
+  const disableExternalLinks = false;
+  //!new URLSearchParams(window.location.search).has(    "enableExternalLinks"  );
 
   /** Load data.json */
   const [data, setData] = useState();
@@ -479,7 +478,7 @@ function App() {
           </Link>
         </Tooltip>
 
-        {!disableExternalLinks && (
+        {/* {!disableExternalLinks && (
           <Tooltip title={"Datenportal, Museum für Naturkunde Berlin"}>
             <Link
               component={disableExternalLinks ? "div" : undefined}
@@ -493,7 +492,7 @@ function App() {
               />
             </Link>
           </Tooltip>
-        )}
+        )} */}
 
         <Tooltip title="werk5">
           <Link

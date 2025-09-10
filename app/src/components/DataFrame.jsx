@@ -118,7 +118,8 @@ const DataFrame = forwardRef((props, ref) => {
     setWavesurferHoverX(e.clientX - b.x - b.width * 0.5);
   }, []);
 
-  if (!data || !node) return <Box ref={ref} />;
+  if (!data || !node || !getString) return <Box ref={ref} />;
+  console.log("getString", typeof getString, getString)
   //console.log( Boolean(node.audio) && autoScroll && isPlaying, Boolean(node.audio), autoScroll, isPlaying)
 
 
@@ -303,7 +304,6 @@ const DataFrame = forwardRef((props, ref) => {
             {node.gallery.map((props, i) => {
               const { src } = props;
               const caption = getString("caption", getStringPath + '.nodes.' + index + ".gallery." + i )
-              console.log(src, props, caption,  getStringPath + '.nodes.' + index + ".gallery." + i )
               return (
                 <Box
                   key={`ci-${i}`}
@@ -343,7 +343,7 @@ const DataFrame = forwardRef((props, ref) => {
         </Box>
       )}
 
-      {node?.audio && (
+      {node?.audio && getString("audio", getStringPath + '.nodes.' + index ) (
         <>
           {/** Waveform */}
           <Box

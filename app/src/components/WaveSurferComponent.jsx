@@ -15,6 +15,9 @@ const WaveSurferComponent = forwardRef((props, ref) => {
     useEffect(() => {
 
         setReady(false);
+
+        
+
         wavesurfer.current = WaveSurfer.create({
             container: container.current,
             height: 'auto'
@@ -75,8 +78,7 @@ const WaveSurferComponent = forwardRef((props, ref) => {
     }, [ready])
 
 
-
-
+   
     return <Box ref={container} sx={{ height: 48, cursor:'pointer' }}></Box>
 })
 
