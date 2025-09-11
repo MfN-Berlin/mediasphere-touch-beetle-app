@@ -102,8 +102,15 @@ const DataFrame = forwardRef((props, ref) => {
   const { autoScroll, setAutoScroll, audioAutoplay, setAudioAutoplay } =
     useContext(DataContext);
   const [audioProgress, setAudioProgress] = useState(0);
+  // useEffect( () =>{
+  //   console.log({audioProgress})
+  // }, [audioProgress])
+
+
   const [isPlaying, setIsPlaying] = useState(false);
-  const onAudioEnded = useCallback(() => next(), [next]);
+  const onAudioEnded = useCallback(() => {
+    if( index < data.nodes.length - 1 ) next()
+  }, [next, data, index]);
   const onPlayPause = useCallback((_isPlaying) => setIsPlaying(_isPlaying), []);
 
   const [wavesurferHoverX, setWavesurferHoverX] = useState(0);
@@ -204,11 +211,11 @@ const DataFrame = forwardRef((props, ref) => {
       {/** Autoscrolling text */}
         { !node.gallery && 
       <AutoScrollContainer
-        on={Boolean(node.audio) && autoScroll && isPlaying}
+        on={Boolean(node.audio) && autoScroll}
         relativeScrollY={
-          Boolean(node.audio) && autoScroll && isPlaying
-            ? audioProgress
-            : -index
+         
+          audioProgress
+         
         }
       >
         <Typography
