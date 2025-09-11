@@ -355,7 +355,7 @@
         "nodes": [
           {
             "text": {
-              "de": "Wie viele andere Insekten erzeugt der Waldmistkäfer Geräusche, indem er zwei Körperteile aneinander reibt, vergleichbar mit den Saiten einer Violine, die durch das Streichen mit dem Bogen zum Schwingen angeregt werden.\n\nDie genaue Stelle befindet sich an der Hüfte des hintersten Beinpaares. Da sie sich auf der dem Körper zugewandten Seite der Hüfte befindet, kann sie an diesem Modell nicht genauer angeschaut werden. Die Stelle besteht aus einer mit feinen Rippen ausgebildeten Oberfläche. Die gerippte Fläche wird so über die darüber liegenden, harten Bauchplatten gerieben, dass dadurch Geräusche entstehen. Diese Form der Lauterzeugung wird Stridulation genannt.\n\nDas erzeugte Geräusch ist so laut, dass selbst wir es hören können. Hält man einen Waldmistkäfer z.B. in der Hand, kann man deutlich seine Protestlaute wahrnehmen. Die Käfer erzeugen nicht nur Laute, um zu protestieren. Sie tun dies beispielsweise auch, um auf Partnersuche zu gehen. Hören Sie nun einen Waldmistkäfer in Aktion mit einer Aufnahme aus dem Tierstimmenarchiv des Museums für Naturkunde Berlin.",
+              "de": "Wie viele andere Insekten erzeugt der Waldmistkäfer Geräusche, indem er zwei Körperteile aneinander reibt, vergleichbar mit den Saiten einer Violine, die durch das Streichen mit dem Bogen zum Schwingen angeregt werden.\n\nDie genaue Stelle befindet sich an der Hüfte des hintersten Beinpaares. Da sie sich auf der dem Körper zugewandten Seite der Hüfte befindet, kann sie an diesem Modell nicht genauer angeschaut werden. Die Stelle besteht aus einer mit feinen Rippen ausgebildeten Oberfläche. Die gerippte Fläche wird so über die darüber liegenden, harten Bauchplatten gerieben, dass dadurch Geräusche entstehen. Diese Form der Lauterzeugung wird Stridulation genannt.\n\nDas erzeugte Geräusch ist so laut, dass selbst wir es hören können. Hält man einen Waldmistkäfer z.B. in der Hand, kann man deutlich seine Protestlaute wahrnehmen. Die Käfer erzeugen nicht nur Laute, um zu protestieren. Sie tun dies beispielsweise auch, um auf Partnersuche zu gehen.",
               "en": "Like many other insects, the dor beetle produces sounds by rubbing two parts of its body against each other, comparable to the strings of a violin that are stimulated to vibrate by the stroke of a bow.\n\nThe exact location is at the hip of the hindmost pair of legs. Since it is located on the side of the hip facing the body, it cannot be examined more closely on this model. The site consists of a surface formed with fine ribs. The rippled surface is rubbed over the hard abdominal plates above so that sound is produced as a result. This form of sound production is called stridulation.\n\nThe sound produced is so loud that even we can hear it. If you hold a dor beetle in your hand, you can clearly hear its protesting sounds. However, these beetles do not only produce sounds to protest but also to search for a mate."
             },
             "audio": {
@@ -372,8 +372,8 @@
               "en": "Now listen to a dor beetle in action with a recording from the animal sound archive of the Natural History Museum in Berlin. "
             },
             "audio": {
-              "de": "stridulation-tsa.mp3",
-              "en": "stridulation-tsa.mp3"
+              "de": "de/stridulation-tsa.mp3",
+              "en": "en/stridulation-tsa.mp3"
             }
           }
         ]

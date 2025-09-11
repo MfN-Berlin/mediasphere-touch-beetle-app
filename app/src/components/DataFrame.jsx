@@ -126,6 +126,8 @@ const DataFrame = forwardRef((props, ref) => {
   
   //console.log( Boolean(node.audio) && autoScroll && isPlaying, Boolean(node.audio), autoScroll, isPlaying)
 
+  console.log(nodeHasAudio && autoScroll && audioProgress || 0)
+
   return (
     <Box
       ref={ref}
@@ -211,10 +213,10 @@ const DataFrame = forwardRef((props, ref) => {
       {/** Autoscrolling text */}
         { !node.gallery && 
       <AutoScrollContainer
-        on={Boolean(node.audio) && autoScroll}
+        on={nodeHasAudio && autoScroll}
         relativeScrollY={
          
-          audioProgress
+          nodeHasAudio && autoScroll && audioProgress || 0
          
         }
       >

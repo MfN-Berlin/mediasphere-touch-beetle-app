@@ -64,8 +64,10 @@ const WaveSurferComponent = forwardRef((props, ref) => {
 
            
             if (autoplay) {
+                try{
                 wavesurfer.current.seekTo(0);
                 wavesurfer.current.play();
+                }catch(e){}
             } 
 
         }
