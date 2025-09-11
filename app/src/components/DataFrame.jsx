@@ -126,7 +126,7 @@ const DataFrame = forwardRef((props, ref) => {
   
   //console.log( Boolean(node.audio) && autoScroll && isPlaying, Boolean(node.audio), autoScroll, isPlaying)
 
-  console.log(nodeHasAudio && autoScroll && audioProgress || 0)
+  //console.log(nodeHasAudio && autoScroll && audioProgress || 0)
 
   return (
     <Box
