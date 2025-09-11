@@ -536,7 +536,7 @@ function App() {
               }}
               onClick={() => {
                 setHasStarted(true);
-                setInfoFrameId("aboutIntro");
+                setInfoFrameId("aboutCreature");
               }}
             >
               <PlayArrowIcon />

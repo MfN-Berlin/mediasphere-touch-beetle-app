@@ -216,7 +216,7 @@ const DataFrame = forwardRef((props, ref) => {
         on={nodeHasAudio && autoScroll}
         relativeScrollY={
          
-          nodeHasAudio && autoScroll && audioProgress || 0
+          nodeHasAudio && autoScroll && audioProgress || -index
          
         }
       >
