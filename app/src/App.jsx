@@ -75,8 +75,8 @@ function App() {
       const address = `${path}.${key}.${language}`;
       const value = get(data, address);
       if (typeof value !== "string")
-        console.warn("Missing or invalid translation: " + address);
-      return value;
+        console.log("Missing or invalid translation: " + address);
+      return value || "";
     },
     [data, language]
   );
@@ -382,7 +382,7 @@ function App() {
                     </MenuItem>
                   );
                 })}
-            {data &&
+            {/* {data &&
               ready &&
               !disableExternalLinks && [
                 <Divider key="divider" />,
@@ -409,7 +409,7 @@ function App() {
                     secondary={getString("searchSecondaryText")}
                   />
                 </MenuItem>,
-              ]}
+              ]} */}
           </Menu>
         </Box>
       </Box>

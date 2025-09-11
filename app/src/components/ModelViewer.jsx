@@ -9,6 +9,9 @@ const ModelViewer = (props) => {
 
   const theme = useTheme();
 
+
+  const [_data, setData] = useState(data)
+
   /** Model is ready loading... */
   const [ready, setReady] = useState(false);
   useEffect(() => {
@@ -78,9 +81,9 @@ const ModelViewer = (props) => {
   useEffect(() => {
     setReady(false);
     setSrc();
-    if (data) {
+    if (_data) {
       /** Force src update (development) */
-      setSrc(data.model.src + `?${Math.random()}`);
+      setSrc(_data.model.src + `?${Math.random()}`);
 
       const ModelViewerElement = customElements.get("model-viewer");
       ModelViewerElement.dracoDecoderLocation = "/static/draco/";
@@ -147,7 +150,7 @@ const ModelViewer = (props) => {
       modelViewer.addEventListener("error", onError);
       updateMaterials();
     }
-  }, [data, dimensions]);
+  }, [_data, dimensions]);
 
   /** Update dimension lines */
   useEffect(() => {

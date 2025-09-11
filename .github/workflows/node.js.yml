@@ -27,7 +27,7 @@ jobs:
         #cache-dependency-path: "common/config/rush"
     - run: npm install -g @microsoft/rush
     - run: rush install
-    - run: BROWSERSLIST_IGNORE_OLD_DATA=1 PUBLIC_URL=https://MfN-Berlin.github.io/mediasphere-touch-beetle-app/ rush build
+    - run: BROWSERSLIST_IGNORE_OLD_DATA=1 VITE_BASE_URL=https://MfN-Berlin.github.io/mediasphere-touch-beetle-app/ rush build
     - name: Upload static files as artifact
       id: deployment
       uses: actions/upload-pages-artifact@v3 # or specific "vX.X.X" version tag for this action

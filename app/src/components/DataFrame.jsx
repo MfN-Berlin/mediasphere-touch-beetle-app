@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 import {
   Typography,
   Box,
@@ -37,7 +37,6 @@ import PauseIcon from "@mui/icons-material/Pause";
 import NavigateNextIcon from "@mui/icons-material/NavigateNext";
 import NavigateBeforeIcon from "@mui/icons-material/NavigateBefore";
 
-
 const DataFrame = forwardRef((props, ref) => {
   const {
     mobile,
@@ -51,6 +50,8 @@ const DataFrame = forwardRef((props, ref) => {
     sx,
     disableExternalLinks,
   } = props;
+
+  console.log({mobile})
 
   /** Jump between nodes */
   const [node, setNode] = useState();
@@ -85,10 +86,6 @@ const DataFrame = forwardRef((props, ref) => {
     }
   }, [index, data, reset]);
 
-
-
-
-
   // useEffect(() => {
   //     console.log({ data, index, node })
   // }, [data, index, node])
@@ -119,16 +116,16 @@ const DataFrame = forwardRef((props, ref) => {
   }, []);
 
   if (!data || !node || !getString) return <Box ref={ref} />;
-  console.log("getString", typeof getString, getString)
+  const nodeHasAudio = node?.audio && typeof getString == "function" && getString("audio",getStringPath + ".nodes." + index)
+  
   //console.log( Boolean(node.audio) && autoScroll && isPlaying, Boolean(node.audio), autoScroll, isPlaying)
-
 
   return (
     <Box
       ref={ref}
       sx={{
         bgcolor: (theme) =>
-          alpha(theme.palette.background.paper, mobile ? 1 : 0.7),
+          alpha(theme.palette.background.paper, mobile ? 0.9 : 0.7),
         position: "absolute",
         boxSizing: "border-box",
 
@@ -137,16 +134,16 @@ const DataFrame = forwardRef((props, ref) => {
         left: "50%",
         transform: "translate(-50%, -50%)",
 
-        height: "auto",
+        height: "100%",
         maxHeight: mobile
-          ? "calc(100% - 150px)"
+          ? "calc(100% - 0px)"
           : node?.gallery
           ? "min( 800px, 80vh)"
           : "min( 500px, 70%)",
 
-        width: "auto", //mobile ? 'calc(100% - 25px)' : 400,
+        width: "100%", //mobile ? 'calc(100% - 25px)' : 400,
         maxWidth: mobile
-          ? "calc(100% - 40px)"
+          ? "calc(100% - 0px)"
           : node?.gallery
           ? "min( 800px, 90vw )"
           : "min( 400px, calc( 60% - 40px ) )",
@@ -206,7 +203,7 @@ const DataFrame = forwardRef((props, ref) => {
         }} />} */}
 
       {/** Autoscrolling text */}
-
+        { !node.gallery && 
       <AutoScrollContainer
         on={Boolean(node.audio) && autoScroll && isPlaying}
         relativeScrollY={
@@ -232,30 +229,35 @@ const DataFrame = forwardRef((props, ref) => {
             rehypePlugins={[rehypeRaw]}
             components={{
               a: ({ node, ...props }) => {
-                return <span>
-                  <Tooltip
-                    placement="top"
-                    title={
-                      (props.title || "") +
-                      (disableExternalLinks ? "\n" + getString("linkDisabled") : "")
-                    }
-                  >
-                    <Link
-                      {...props}
-                      title={undefined}
-                      {...(disableExternalLinks ? { href: null } : {})}
-                    />
-                  </Tooltip>
-                </span>
-              }
-              ,
+                return (
+                  <span>
+                    <Tooltip
+                      placement="top"
+                      title={
+                        (props.title || "") +
+                        (disableExternalLinks
+                          ? "\n" + getString("linkDisabled")
+                          : "")
+                      }
+                    >
+                      <Link
+                        {...props}
+                        title={undefined}
+                        {...(disableExternalLinks ? { href: null } : {})}
+                      />
+                    </Tooltip>
+                  </span>
+                );
+              },
               p: "div",
               figcaption: ({ node, ...props }) => {
-                return <Typography
-                  variant="caption"
-                  sx={{ display: "block", mt: -1, mb: 1 }}
-                  {...props}
-                />
+                return (
+                  <Typography
+                    variant="caption"
+                    sx={{ display: "block", mt: -1, mb: 1 }}
+                    {...props}
+                  />
+                );
               },
               startbutton: ({ node, ...props }) => (
                 <Box sx={{ my: 4, display: "flex" }}>
@@ -277,10 +279,13 @@ const DataFrame = forwardRef((props, ref) => {
                 </Box>
               ),
             }}
-          >{ getString("text", getStringPath + '.nodes.' + index )}</ReactMarkdown>
+          >
+            {getString("text", getStringPath + ".nodes." + index)}
+          </ReactMarkdown>
         </Typography>
         {/* {index < data.nodes.length - 1 && <Button variant="contained" onClick={next}>Next</Button>} */}
       </AutoScrollContainer>
+}
 
       {node.gallery && (
         <Box sx={{ mx: 4, overflowX: "hidden" }}>
@@ -303,7 +308,10 @@ const DataFrame = forwardRef((props, ref) => {
           >
             {node.gallery.map((props, i) => {
               const { src } = props;
-              const caption = getString("caption", getStringPath + '.nodes.' + index + ".gallery." + i )
+              const caption = getString(
+                "caption",
+                getStringPath + ".nodes." + index + ".gallery." + i
+              );
               return (
                 <Box
                   key={`ci-${i}`}
@@ -343,69 +351,73 @@ const DataFrame = forwardRef((props, ref) => {
         </Box>
       )}
 
-      {node?.audio && getString("audio", getStringPath + '.nodes.' + index ) (
-        <>
-          {/** Waveform */}
-          <Box
-            sx={{
-              display: "flex",
-              justifyContent: "center",
-              alignItems: "center",
-              mt: 2,
-              mx: 4,
-            }}
-          >
-            <Tooltip
-              placement="top"
-              PopperProps={{
-                sx: {
-                  ml: wavesurferHoverX + "px !important",
-                  transition: "padding-left 0.25s",
-                },
-                left: 200,
+      {nodeHasAudio &&
+        (
+          <>
+            {/** Waveform */}
+            <Box
+              sx={{
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+                mt: 2,
+                mx: 4,
               }}
-              title={waversureferReady ? getString("setAudioPlayhead") : ""}
             >
-              <Box sx={{ flexGrow: 1 }} onMouseMove={updateWSX}>
-                <WaveSurferComponent
-                  ref={wavesurfer}
-                  url={`./audio/${ getString("audio", getStringPath + '.nodes.' + index ) }`}
-                  onAudioEnded={onAudioEnded}
-                  onAudioProgress={setAudioProgress}
-                  onPlayPause={onPlayPause}
-                  autoplay={audioAutoplay}
-                  onReady={(ready) => setWavesurferReady(ready)}
-                />
-              </Box>
-            </Tooltip>
-            {waversureferReady ? (
-              <Tooltip title={getString(isPlaying ? "pause" : "play")}>
-                <IconButton
-                  size="large"
-                  onClick={() => {
-                    //console.log(wavesurfer)
-                    if (wavesurfer.current.isPlaying()) {
-                      wavesurfer.current.pause();
-                    } else {
-                      wavesurfer.current.play();
-                    }
-                  }}
-                  sx={{
-                    ml: 2,
-                    bgcolor: "primary.main",
-                    color: "white",
-                    "&:hover": { bgcolor: "primary.dark" },
-                  }}
-                >
-                  {isPlaying ? <PauseIcon /> : <PlayArrowIcon />}
-                </IconButton>
+              <Tooltip
+                placement="top"
+                PopperProps={{
+                  sx: {
+                    ml: wavesurferHoverX + "px !important",
+                    transition: "padding-left 0.25s",
+                  },
+                  left: 200,
+                }}
+                title={waversureferReady ? getString("setAudioPlayhead") : ""}
+              >
+                <Box sx={{ flexGrow: 1 }} onMouseMove={updateWSX}>
+                  <WaveSurferComponent
+                    ref={wavesurfer}
+                    url={`./audio/${getString(
+                      "audio",
+                      getStringPath + ".nodes." + index
+                    )}`}
+                    onAudioEnded={onAudioEnded}
+                    onAudioProgress={setAudioProgress}
+                    onPlayPause={onPlayPause}
+                    autoplay={audioAutoplay}
+                    onReady={(ready) => setWavesurferReady(ready)}
+                  />
+                </Box>
               </Tooltip>
-            ) : (
-              <CircularProgress />
-            )}
-          </Box>
-        </>
-      )}
+              {waversureferReady ? (
+                <Tooltip title={getString(isPlaying ? "pause" : "play")}>
+                  <IconButton
+                    size="large"
+                    onClick={() => {
+                      //console.log(wavesurfer)
+                      if (wavesurfer.current.isPlaying()) {
+                        wavesurfer.current.pause();
+                      } else {
+                        wavesurfer.current.play();
+                      }
+                    }}
+                    sx={{
+                      ml: 2,
+                      bgcolor: "primary.main",
+                      color: "white",
+                      "&:hover": { bgcolor: "primary.dark" },
+                    }}
+                  >
+                    {isPlaying ? <PauseIcon /> : <PlayArrowIcon />}
+                  </IconButton>
+                </Tooltip>
+              ) : (
+                <CircularProgress />
+              )}
+            </Box>
+          </>
+        )}
 
       {(node?.audio || data?.nodes.length > 1) && (
         <>
@@ -445,7 +457,7 @@ const DataFrame = forwardRef((props, ref) => {
               </Fab>
             </Tooltip>
 
-            {node.audio ? (
+            {nodeHasAudio ? (
               <>
                 <Tooltip title={getString("autoscrollTooltip")}>
                   <FormControlLabel
@@ -544,6 +556,10 @@ DataFrame.propTypes = {
   setCameraTarget: PropTypes.func,
   sx: PropTypes.object,
   mobile: PropTypes.bool,
+  getString: PropTypes.func,
+  getStringPath: PropTypes.string,
+  data: PropTypes.object,
+  disableExternalLinks: PropTypes.bool,
 };
 
 DataFrame.defaultProps = {
@@ -553,6 +569,10 @@ DataFrame.defaultProps = {
   setCameraOrbit: () => {},
   setFieldOfView: () => {},
   setCameraTarget: () => {},
+  getString: () => {},
+  getStringPath: "",
+  data: undefined,
+  disableExternalLinks: false,
   sx: {},
 };
 
