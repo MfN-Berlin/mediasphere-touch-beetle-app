@@ -104,7 +104,7 @@ const ModelViewer = (props) => {
 
       const onload = (e) => {
 
-        console.log('ModelViewer.LOAD', e)
+        //console.log('ModelViewer.LOAD', e)
 
         updateMaterials();
 

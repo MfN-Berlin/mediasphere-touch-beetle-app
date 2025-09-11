@@ -51,7 +51,6 @@ const DataFrame = forwardRef((props, ref) => {
     disableExternalLinks,
   } = props;
 
-  console.log({mobile})
 
   /** Jump between nodes */
   const [node, setNode] = useState();
