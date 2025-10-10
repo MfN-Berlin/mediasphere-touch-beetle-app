@@ -115,6 +115,22 @@
     "documentTitle": {
       "de": "Der Waldmistkäfer",
       "en": "The Dor Beetle"
+    },
+    "imprint":{
+      "de":"Impressum",
+      "en":"Imprint"
+    },
+    "imprintUrl":{
+      "de":"https://www.museumfuernaturkunde.berlin/de/impressum",
+      "en":"https://www.museumfuernaturkunde.berlin/en/imprint"
+    },
+    "generalPrivacyNotice":{
+      "de":"Datenschutzerklärung",
+      "en":"General Privacy Notice"
+    },
+    "generalPrivacyNoticeUrl":{
+      "de":"https://www.museumfuernaturkunde.berlin/de/datenschutzerklaerung",
+      "en":"https://www.museumfuernaturkunde.berlin/en/general-privacy-notice"
     }
   },
   "info": {

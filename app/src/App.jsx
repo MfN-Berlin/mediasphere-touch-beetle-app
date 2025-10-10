@@ -31,6 +31,8 @@ import MenuIcon from "@mui/icons-material/Menu";
 import HelpIcon from "@mui/icons-material/Help";
 import SchoolIcon from "@mui/icons-material/School";
 import SearchIcon from "@mui/icons-material/Search";
+import ArticleIcon from "@mui/icons-material/Article";
+import PolicyIcon from "@mui/icons-material/Policy";
 import CloseIcon from "@mui/icons-material/Close";
 import LanguageIcon from "@mui/icons-material/Language";
 
@@ -325,20 +327,23 @@ function App() {
               ready &&
               Object.keys(data.languages).length > 1 &&
               Object.keys(data.languages)
-                .map((lang, index ) => {
+                .map((lang, index) => {
                   return (
                     <MenuItem
                       key={`menuitem-language-${lang}`}
                       onClick={() => setLanguage(lang)}
                       sx={{
-                        color: lang === language ? theme => theme.palette.primary.main : "text.secondary",
+                        color:
+                          lang === language
+                            ? (theme) => theme.palette.primary.main
+                            : "text.secondary",
                         //textDecoration:(lang === language ? 'underline' : 'none') ,
                       }}
                     >
                       <ListItemIcon
                         sx={{
-                          color:'text.secondary',
-                          visibility:index === 0 ? 'visible' : 'hidden'
+                          color: "text.secondary",
+                          visibility: index === 0 ? "visible" : "hidden",
                         }}
                         fontSize="small"
                       >
@@ -382,34 +387,61 @@ function App() {
                     </MenuItem>
                   );
                 })}
-            {/* {data &&
-              ready &&
-              !disableExternalLinks && [
+            {data &&
+              ready && // !disableExternalLinks &&
+              [
                 <Divider key="divider" />,
                 <MenuItem
-                  key="item"
                   component={Link}
-                  href={getString("searchUrl")}
+                  target="_blank"
+                  href={getString("imprintUrl")}
                 >
                   <ListItemIcon
-                    sx={{ color: "text.secondary", alignSelf: "flex-start" }}
+                    sx={{ color: "text.secondary" }}
                     fontSize="small"
                   >
-                    {" "}
-                    <SearchIcon />
+                    <ArticleIcon />
                   </ListItemIcon>
-                  <ListItemText
-                    sx={{
-                      "& .MuiListItemText-secondary": {
-                        whiteSpace: "break-spaces",
-                      },
-                    }}
-                    color="text.primary"
-                    primary={getString("searchPrimaryText")}
-                    secondary={getString("searchSecondaryText")}
-                  />
+                  <ListItemText>{getString("imprint")}</ListItemText>
                 </MenuItem>,
-              ]} */}
+                <MenuItem
+                  component={Link}
+                  target="_blank"
+                  href={getString("generalPrivacyNoticeUrl")}
+                >
+                  <ListItemIcon
+                    sx={{ color: "text.secondary" }}
+                    fontSize="small"
+                  >
+                    <PolicyIcon />
+                  </ListItemIcon>
+                  <ListItemText primary={getString("generalPrivacyNotice")} />
+                </MenuItem>,
+
+                // <MenuItem
+                //   key="item"
+                //   component={Link}
+                //   href={getString("searchUrl")}
+                // >
+                //   <ListItemIcon
+                //     sx={{ color: "text.secondary", alignSelf: "flex-start" }}
+                //     fontSize="small"
+                //   >
+                //     {" "}
+                //     <SearchIcon />
+                //   </ListItemIcon>
+                //   <ListItemText
+                //     sx={{
+                //       "& .MuiListItemText-secondary": {
+                //         whiteSpace: "break-spaces",
+                //       },
+                //     }}
+                //     color="text.primary"
+                //     primary={getString("searchPrimaryText")}
+                //     secondary={getString("searchSecondaryText")}
+                //   />
+                // </MenuItem>,
+              ]}
           </Menu>
         </Box>
       </Box>
